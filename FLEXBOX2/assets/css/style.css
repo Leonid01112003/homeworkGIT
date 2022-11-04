@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+width: 90%;
+min-width: 1200px;
+margin: 0 auto;
+border: 2px solid #000;
+
+}
+section {
+    margin-bottom: 20px;
+
+}
+
+.left {
+    height: 200px;
+    background-color: aqua;
+
+    
+}
+.right {
+    height: 200px;
+    background-color: blue
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.floats .left {
+    float: left;
+    width: 50%;
+}
+.floats .right {
+    float: right;
+    width: 50%;
+}
+.clr {
+    clear: both;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.flexbox .left,
+.flexbox .right {
+
+width: 50%;
+}

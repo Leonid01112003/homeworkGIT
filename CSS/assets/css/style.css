@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+width: 100%;
+height: 100%;
+
+}
+ul,ol {
+    list-style: none;
+}
+img {
+vertical-align: top;
+
+}
+a {
+   text-decoration: underline; 
+}
+a:hover {
+text-decoration: none;
+
+}
+.content p {
+    margin-bottom: 20px;
+}
+.content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+
+
+span.blue {
+color: red;
+
+}
+.blue {
+    color: blue;
+}
+.container {
+    width: 90%;
+    max-width: 600;
+    margin:0 auto;
+}
+.section-title {
+text-align: center;
+font-weight: 700;
+color: #070707;
+font-size: 34px;
+margin-bottom: 43px;
+}
+.gray-bg {
+    background-color:#e5e5e5;
+}
+section {
+    padding: 100px 0;
+    
+}
+.about .container {
+    max-width: 480px;
+}
+.skills {
+    padding: 50px 0;
+}
+.content {
+text-align: center;
+}
+.content p {
+   margin-bottom: 30px; 
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.content *:last-child {
+
+    margin-bottom: 0px;
+}
+.button-wrap {
+margin-bottom: 28px;
+text-align: center;
+}
+.btn {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    background-color: #070707;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 10%;
+    border: 2px solid #070707;
+    cursor: pointer;
+    border-radius: 22px;
+    padding: 0 16px;
+    transition: all 2s ease;
+    
+}
+.btn:hover {
+background-color: #fff;
+color: #070707;
+
+}
+.skills_list {
+    font-size: 0;
+}
+
+.skills_list li {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 97px;
+    width: 169.5px;
+
+
+    height: 230px;
+    background-color: aqua;
+    border: 2px solid black;
+}
+.skills_list li .last {
+    margin-right: 0;
+}
+.skills_list ~ p {
+
+  
+}

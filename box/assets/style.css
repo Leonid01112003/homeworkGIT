@@ -1,0 +1,19 @@
+section {
+    /*border: 2px solid blue;*/
+    background-color: lightblue;
+    height: 100px;
+    margin: 50px 50px;
+}
+
+#sec2 {
+    margin-top: 20px;
+    margin-bottom: 70 px;
+}
+#sec1 {
+    /*padding-top: 1px;*/
+    border-top: 1px solid transparent;
+}
+h1 {
+    margin-top: 20px;
+    font-size: 22px;
+}

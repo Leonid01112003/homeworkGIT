@@ -1,0 +1,19 @@
+.logo {
+    margin-right: 30px;
+
+}
+.logo__link {
+    display: inline-block;
+}
+.logo__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.header__logo.logo {
+    height: 40px;
+}
+
+.footer__logo.logo {
+    height: 80px;
+}

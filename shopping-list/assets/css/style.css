@@ -1,0 +1,41 @@
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .1s ease-in;
+}
+body {
+    background-color:#3B3F45;
+    color: #FFFFFF;
+
+    
+}
+header {
+    background-color: #4A4F56;
+    color:#FF8984 ;
+    text-align: center;
+}
+ul li:nth-child(2n+1) {
+    background-color: #88839E;
+    
+}
+ul li {
+   
+}
+ul {
+    background-color: #7A7593;
+    
+}
+.container {
+    margin: 0 auto;
+  max-width: 534px;
+  padding: 40px 20px;
+}
+
+
+  
+  
+  .list {
+    list-style: none;
+  
+  }
+
