@@ -51,9 +51,6 @@ section {
 .form-right .icons {
   display: inline-block;
 }
-.form-right .form-row {
-  margin-right: 10px;
-}
 .form-right .form-row label {
   font-family: "Roboto";
   font-weight: 400;
@@ -76,11 +73,7 @@ select {
   gap: 10px;
 }
 
-.jq-selectbox {
-  width: 100%;
-}
 .jq-selectbox__select {
-  width: 245px;
   height: 38px;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
