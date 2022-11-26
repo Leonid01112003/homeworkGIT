@@ -15,17 +15,47 @@ html, body {
   margin: 0 auto;
 }
 
-h2 {
-  margin-top: 70px;
-  margin-bottom: 40px;
+header {
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 
-.text p {
-  margin-bottom: 20px;
+.h2 {
+  margin-top: 62px;
+  margin-bottom: 39px;
+}
+.h2 small {
+  font-family: "Farro";
+  font-style: normal;
+  font-weight: 300;
+}
+.h2 span {
+  font-family: "Francois One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
+  margin-bottom: 30px;
+}
+
+i {
+  font-style: italic;
+  font-family: "PT Sans";
+  font-size: 26px;
+  line-height: 48px;
+  font-weight: 400;
 }
 
 p:last-child {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 ul li {
@@ -41,11 +71,50 @@ ul li {
   max-width: 1200px;
 }
 
-.navigation li:nth-child(2)::after {
+a {
+  color: #000000;
+}
+
+.navigation {
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+.navigation a {
+  text-decoration: none;
+}
+.navigation li:nth-of-type(3) {
+  font-family: "Staatliches";
+  font-size: 22px;
+  line-height: 27.5px;
+}
+.navigation li:nth-of-type(2) {
+  font-family: "Staatliches";
+  font-size: 22px;
+  line-height: 27.5px;
+}
+.navigation li:nth-of-type(2)::after {
   content: "/";
-  width: 8;
-  height: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .navigation li:nth-child(1) {
   margin-right: 50px;
+  font-family: "Tourney";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+}
+
+mark {
+  background-color: lightgray;
+  padding: 5px;
+}
+
+.introduction {
+  margin-top: -4px;
+}
+
+.header_container {
+  margin-bottom: 77px;
 }

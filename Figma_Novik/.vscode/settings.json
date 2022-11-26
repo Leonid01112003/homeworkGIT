@@ -2,5 +2,6 @@
     "editor.wordWrap": "on",
     "editor.formatOnType": false,
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "liveServer.settings.port": 5501
 }

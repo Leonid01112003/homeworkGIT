@@ -1,0 +1,169 @@
+$base-size: 16;
+
+@mixin fz($size_px) {
+  font-size: ($size_px / $base-size) * 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include fz(16);
+  background-color: #E5E5E5;
+}
+
+a, button {
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 55px 135px;
+  
+  
+  margin-top: 55px;
+  background-color: #E5E5E5;
+  justify-content: space-between;
+}
+
+
+
+section {
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 6px;
+  
+}
+.name-form {
+  display: flex;
+  
+}
+.form-left {
+  flex-basis: 48%;
+  .form-email {
+    
+  }
+  
+}
+.form-right {
+  .icons {
+    display: inline-block;
+  }
+  .form-row {
+    margin-right: 10px;
+    
+    label {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}
+input[type=text], 
+select {
+  height: 38px;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  background-color: #fff;
+  width: 100%;
+  
+  
+  
+}
+
+.name-form {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+  
+.jq-selectbox {
+  
+  
+  width: 100%;
+  
+  &__select {
+    
+    width: 245px;
+    height: 38px;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    background: #fff;
+    color: #545454;
+    box-shadow: none;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-shadow: none;
+    
+    padding-top: 6px;
+    &:hover {
+      background: #fff;
+    }
+  }
+  &__trigger {
+    border-left: none;
+  }
+}
+
+
+.jq-file {
+  
+  max-width: 138px;
+  
+  .jq-file_name {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Inter';
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    padding: 6px 22px 6px 10px;
+    
+  }
+  background: url(../images/Camera.svg) 112px;
+  background-repeat: no-repeat;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+}
+   .button-trash {
+    margin-left: 20px;
+    position: absolute;
+    display: inline-block;
+    button {
+      
+      background-color: #fff;
+      border: 1px solid #E4E4E4;
+      padding: 15px;
+      border-radius: 6px;
+      background: url(../images/Trash.svg) no-repeat 6px;
+      &:hover {
+        background-color: olive;
+      }
+      
+    }
+    
+    
+    
+   }
+   
