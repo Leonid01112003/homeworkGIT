@@ -48,6 +48,7 @@ section {
 .form-left {
   flex-basis: 48%;
 }
+
 .form-right .icons {
   display: inline-block;
 }
