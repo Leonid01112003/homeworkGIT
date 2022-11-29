@@ -25,7 +25,6 @@ ul, ol {
 }
 
 .container {
-  display: flex;
   max-width: 1440px;
   margin: 0 auto;
   width: 90%;
@@ -328,4 +327,9 @@ a {
   font-size: 15px;
   line-height: 22px;
   color: #007BFF;
+}
+
+form {
+  display: flex;
+  gap: 30px;
 }
