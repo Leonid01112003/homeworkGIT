@@ -17,9 +17,9 @@ body {
     
 }
 .container {
-    max-width: 760px;
+   
+   width: 1200px;
     margin: 0 auto;
-    width: 90%;
     padding: 100px;
     background-color: #fff;
 }
@@ -142,5 +142,11 @@ option {
             border-bottom: 2px solid $theme-color;
             transform: rotate(45deg);
         }
+    }
+}
+
+@media screen and (width: 1024px) {
+    .container {
+        width: 960px;
     }
 }

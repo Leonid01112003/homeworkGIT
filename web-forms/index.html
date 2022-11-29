@@ -17,7 +17,7 @@
           <section class="form-left">
 
             <h1>Create an Account</h1>
-          <div class="name-form">
+          <div class="name-form margin">
             <div class="form-row">
               <label for="name">First Name</label>
               <div class="form-elem">
@@ -25,34 +25,34 @@
               </div>
             </div>
             <div class="form-row">
-              <label for="name">Last Name</label>
+              <label for="last-name">Last Name</label>
               <div class="form-elem">
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="last-name">
               </div>
             </div>
           </div>
   
-          <div class="form-email">
-            <div class="form-all">
-              <label for="email">E-mail</label>
+          <div class="form-email margin">
+            <div class="form-row"> 
+              <label for="email-100">E-mail</label>
               <div class="form-elem">
-                <input type="text" name="email" id="email">
-                <span>We'll never share your email with anyone else.</span>
+                <input type="text" name="email" id="email-100">
+                
               </div>
-              
+              <span>We'll never share your email with anyone else.</span>
             </div>
           </div>
-          <div class="radio">
+          <div class="radio margin">
             <div class="gender">
-              <input type="radio">
-              <label for="radio">Male</label>
+              <input type="radio" name="gender" value="male" id="radio-male" checked>
+              <label for="radio-male">Male</label>
             </div>
             <div class="gender">
-              <input type="radio">
-              <label for="radio">Female</label>
+              <input type="radio" name="gender" value="female" id="radio-female">
+              <label for="radio-female">Female</label>
             </div>
           </div>
-          <div class="name-form">
+          <div class="name-form margin">
             <div class="form-row">
               <label for="country">Country</label>
               <div class="form-elem">
@@ -64,9 +64,9 @@
               </div>
             </div>
             <div class="form-row">
-              <label for="city">City</label>
+              <label for="city-left">City</label>
               <div class="form-elem">
-                <input type="text" name="city" id="city">
+                <input type="text" name="city" id="city-left">
               </div>
             </div>
           </div>
@@ -74,16 +74,17 @@
             
                 
           <div class="button">
-            <button type="submit">Sign Up</button>
+            <button type="submit" class="styler">Sign Up</button>
           </div>
           <footer>
             <div class="text">
-              <p>By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a>
-                and <a href="#">Privacy policy</a> .</p>
+              <p>By clicking the 'Sign Up' button,you confirm that you accept our</p>
+              <p> <a href="#">Terms of Use</a>
+                and <a href="#">Privacy Policy</a> .</p>
             </div>
             <div class="registration">
               <p>Have an account?</p>
-              <p><a href="#">Log In</a></p>
+              <a href="#">Log In</a>
             </div>
           </footer>
           
@@ -99,40 +100,40 @@
       <section class="form-right">
             
         <h1>Profile</h1>
-      <img src="assets/images/Image.png" alt="">
-      
-      
-      <div class="icons">
-        <div class=" jq-file" id="photo-styler">
-          <div class="jq-file_name">Файл не выбран</div>
-          <input type="file" name="photo" id="photo" value="">
-        </div>
-        <div class="button-trash" id="photo-styler">
-          <button type="button"></button>
-          
+        <div class="input-photo margin">
+          <div class="image-wrapper">
+            <img src="assets/images/Image.png" alt="">
+          </div>
+          <div class="icons">
+            <input type="file" name="photo" id="photo"  >
+            <div class="button-trash" id="photo-styler">
+              <button type="button" ></button>
+            </div>
+            <p>Up to 1 MB (300x300 px)</p> 
+          </div>
+         
         </div>
         
-      </div>
-      <span></span>
-      <div class="name-form">
+      
+      <div class="name-form margin">
         <div class="form-row">
-          <label for="name">Name</label>
+          <label for="name-right">Name</label>
           <div class="form-elem">
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name-right">
           </div>
         </div>
         <div class="form-row">
-          <label for="name">E-mail</label>
+          <label for="email">E-mail</label>
           <div class="form-elem">
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="email">
           </div>
         </div>
       </div>
-      <div class="name-form">
+      <div class="name-form margin">
         <div class="form-row">
-          <label for="country">Country</label>
+          <label for="country-right">Country</label>
           <div class="form-elem">
-            <select name="country" id="country">
+            <select name="country-right" id="country-right">
               <option disabled="disabled" selected="selected">Select</option>
               <option value="Ukraine">Ukraine</option>
               <option value="Poland">Poland</option>
@@ -140,29 +141,29 @@
           </div>
         </div>
         <div class="form-row">
-          <label for="city">City</label>
+          <label for="city-right">City</label>
           <div class="form-elem">
-            <input type="text" name="city" id="city">
+            <input type="text" name="city" id="city-right">
           </div>
         </div>
       </div>
-      <div class="name-form">
+      <div class="name-form margin">
         <div class="form-row">
-          <label for="name">Zip Code</label>
+          <label for="zip">Zip Code</label>
           <div class="form-elem">
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="zip">
           </div>
         </div>
         <div class="form-row">
-          <label for="name">Phone Number</label>
+          <label for="number">Phone Number</label>
           <div class="form-elem">
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="number">
           </div>
         </div>
       </div>
       
-      <div class="small-button">
-        <button type="button">Update</button>
+      <div class="small-button margin">
+        <button type="button" class="styler">Update</button>
       </div>
       
       
@@ -191,7 +192,7 @@
         (function($) {
 $(function() {
 
-	$('select').styler();
+	$('select,input').styler(); 
 
 });
 })(jQuery);

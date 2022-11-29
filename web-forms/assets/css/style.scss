@@ -3,7 +3,37 @@ $base-size: 16;
 @mixin fz($size_px) {
   font-size: ($size_px / $base-size) * 1rem;
 }
-
+@mixin button {
+  font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 22px;
+    color: #FFFFFF;
+    font-weight: 500;
+    background: #007BFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    
+    box-shadow: none;
+    text-shadow: none;
+}
+@mixin inter {
+  font-family: 'Inter';
+    font-weight: 400;
+}
+@mixin hover {
+  &:hover { 
+    border: 2px solid #007BFF;
+  }
+}
+@mixin arrow {
+  position: absolute;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #969696;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +48,7 @@ body {
 
 body {
   @include fz(16);
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 a, button {
@@ -32,49 +62,127 @@ ul, ol {
 
 .container {
   display: flex;
-  
   max-width: 1440px;
   margin: 0 auto;
   width: 90%;
   padding: 55px 135px;
-  
-  
+  gap: 30px;
   margin-top: 55px;
-  background-color: #E5E5E5;
-  justify-content: space-between;
+  background-color: #F7F7F7;
+  
 }
 
 
 
 section {
+
   background-color: #fff;
   padding: 35px;
   border-radius: 6px;
   
 }
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+    color: #1C1C1C;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+}
 .name-form {
   display: flex;
   
 }
+.input-photo {
+  display: flex;
+}
 .form-left {
-  flex-basis: 48%;
+  .margin {
+    margin-bottom: 22px;
+  }
+  .form-elem {
+    padding-top: 7px;
+  }
+  span {
+    position: relative;
+    top: 7px;
+    
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+    color: #969696;
+    font-weight: 400;
+  }
   
   
 }
+.radio {
+  display: flex;
+  
+  gap: 20px;
+  .jq-radio.checked  {
+    .jq-radio__div {
+      width: 20px;
+    height: 20px;
+    margin: 0px 0px 5px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: none;
+    border: 7px solid #007BFF;
+    }
+    
+  }
+  
+  .jq-radio {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border: 1px solid #E4E4E4;
+    &:hover {
+      
+      
+      box-shadow:inset 0 0 0 5px yellow;
+    }
+    
+  }
+}
+
+  
+
 .form-right {
+  .margin {
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: 'Roboto';
+    font-size: 13px;
+    line-height: 18px;
+    color: #969696;
+    font-weight: 400;
+    position: relative;
+    top: 9px;
+  }
   .icons {
     display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
   }
-  .form-row {
-    
-    
-    label {
-      font-family: 'Roboto';
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 22px;
-    }
+  
+  .form-elem {
+    padding-top: 5px;
   }
+}
+label {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #2d2c2c;
+  
+  
 }
 input[type=text], 
 select {
@@ -83,9 +191,22 @@ select {
   border-radius: 6px;
   background-color: #fff;
   width: 100%;
-  
-  
-  
+  min-width: 245px;
+  @include hover();
+}
+.form-email {
+  width: 100%;
+
+}
+
+@media screen and (max-width: 900px ) {
+  .name-form {
+    flex-direction: column;
+    
+  }
+  .container {
+    
+  }
 }
 
 .name-form {
@@ -95,21 +216,16 @@ select {
 }
   
 .jq-selectbox {
-  
-  
-  
-  
   &__select {
     
-   
+   width: 245px;
     height: 38px;
     border: 1px solid #E4E4E4;
     border-radius: 6px;
     background: #fff;
     color: #545454;
     box-shadow: none;
-    font-family: 'Inter';
-    font-weight: 400;
+    @include inter();
     font-size: 15px;
     line-height: 22px;
     text-shadow: none;
@@ -117,51 +233,130 @@ select {
     padding-top: 6px;
     &:hover {
       background: #fff;
+      border: 2px solid #007BFF;
+       
+      
+    }
+    &::before {
+      content: "";
+     @include arrow();
+    transform: rotate(180deg);
+    top: 10px;
+    }
+    &::after {
+      content: "";
+      @include arrow();
+    top: 18px;
     }
   }
   &__trigger {
     border-left: none;
+    &-arrow {
+      opacity: 0;
+    }
   }
 }
 
-
 .jq-file {
-  
+  height: 30px;
   max-width: 138px;
   
-  .jq-file_name {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: 'Inter';
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    padding: 6px 22px 6px 10px;
-    
+  .jq-file__name {
+    opacity: 0;
   }
   background: url(../images/Camera.svg) 112px;
   background-repeat: no-repeat;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
+  .jq-file__browse {
+    opacity: 0;
+  }
+  @include hover();
 }
    .button-trash {
-    margin-left: 20px;
+    margin-left: 11px;
     position: absolute;
     display: inline-block;
     button {
       
       background-color: #fff;
       border: 1px solid #E4E4E4;
-      padding: 15px;
+      padding: 14px;
       border-radius: 6px;
       background: url(../images/Trash.svg) no-repeat 6px;
+      @include hover();
+      
+    }
+   }
+   .button {
+    margin-top: -5px;
+    button {
+      width: 100%;
+      @include button();
       &:hover {
-        background-color: olive;
+        color: #000;
+        border: 1px solid #007BFF;
+      }
+    }
+    
+   }
+   .small-button {
+    margin-top: 22px;
+    button {
+      width: 30%;
+      @include button();
+      &:hover {
+        color: #000;
+        border: 1px solid #007BFF;
       }
       
     }
-    
-    
-    
    }
    
+.text {
+  margin-left: 5.5px;
+  padding-bottom: 18px;
+  margin-top: 20px;
+  text-align: center;
+  p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #969696;
+    
+  }
+  a {
+    padding-left: 4px;
+    @include inter();
+    color: #007BFF;
+    font-size: 13px;
+    line-height: 20px;
+    
+  }
+  border-bottom: 1px solid #E4E4E4;
+}
+a {
+  text-decoration: none;
+}
+.registration {
+  
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+  gap: 18px;
+  p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #545454;
+  }
+  a {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #007BFF;
+  }
+}

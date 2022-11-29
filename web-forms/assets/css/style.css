@@ -12,7 +12,7 @@ body {
 
 body {
   font-size: 1rem;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 a, button {
@@ -30,9 +30,9 @@ ul, ol {
   margin: 0 auto;
   width: 90%;
   padding: 55px 135px;
+  gap: 30px;
   margin-top: 55px;
-  background-color: #E5E5E5;
-  justify-content: space-between;
+  background-color: #F7F7F7;
 }
 
 section {
@@ -41,22 +41,91 @@ section {
   border-radius: 6px;
 }
 
+h1 {
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 18px;
+  color: #1C1C1C;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .name-form {
   display: flex;
 }
 
-.form-left {
-  flex-basis: 48%;
+.input-photo {
+  display: flex;
 }
 
+.form-left .margin {
+  margin-bottom: 22px;
+}
+.form-left .form-elem {
+  padding-top: 7px;
+}
+.form-left span {
+  position: relative;
+  top: 7px;
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 18px;
+  color: #969696;
+  font-weight: 400;
+}
+
+.radio {
+  display: flex;
+  gap: 20px;
+}
+.radio .jq-radio.checked .jq-radio__div {
+  width: 20px;
+  height: 20px;
+  margin: 0px 0px 5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: none;
+  border: 7px solid #007BFF;
+}
+.radio .jq-radio {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border: 1px solid #E4E4E4;
+}
+.radio .jq-radio:hover {
+  box-shadow: inset 0 0 0 5px yellow;
+}
+
+.form-right .margin {
+  margin-bottom: 20px;
+}
+.form-right p {
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 18px;
+  color: #969696;
+  font-weight: 400;
+  position: relative;
+  top: 9px;
+}
 .form-right .icons {
   display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
 }
-.form-right .form-row label {
+.form-right .form-elem {
+  padding-top: 5px;
+}
+
+label {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
+  color: #2d2c2c;
 }
 
 input[type=text],
@@ -66,8 +135,22 @@ select {
   border-radius: 6px;
   background-color: #fff;
   width: 100%;
+  min-width: 245px;
+}
+input[type=text]:hover,
+select:hover {
+  border: 2px solid #007BFF;
 }
 
+.form-email {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .name-form {
+    flex-direction: column;
+  }
+}
 .name-form {
   display: flex;
   justify-content: flex-start;
@@ -75,6 +158,7 @@ select {
 }
 
 .jq-selectbox__select {
+  width: 245px;
   height: 38px;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
@@ -90,40 +174,158 @@ select {
 }
 .jq-selectbox__select:hover {
   background: #fff;
+  border: 2px solid #007BFF;
+}
+.jq-selectbox__select::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #969696;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  transform: rotate(180deg);
+  top: 10px;
+}
+.jq-selectbox__select::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #969696;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  top: 18px;
 }
 .jq-selectbox__trigger {
   border-left: none;
 }
+.jq-selectbox__trigger-arrow {
+  opacity: 0;
+}
 
 .jq-file {
+  height: 30px;
   max-width: 138px;
   background: url(../images/Camera.svg) 112px;
   background-repeat: no-repeat;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
 }
-.jq-file .jq-file_name {
-  font-size: 13px;
-  line-height: 18px;
-  font-family: "Inter";
-  font-weight: 400;
-  text-align: center;
-  color: #fff;
-  padding: 6px 22px 6px 10px;
+.jq-file .jq-file__name {
+  opacity: 0;
+}
+.jq-file .jq-file__browse {
+  opacity: 0;
+}
+.jq-file:hover {
+  border: 2px solid #007BFF;
 }
 
 .button-trash {
-  margin-left: 20px;
+  margin-left: 11px;
   position: absolute;
   display: inline-block;
 }
 .button-trash button {
   background-color: #fff;
   border: 1px solid #E4E4E4;
-  padding: 15px;
+  padding: 14px;
   border-radius: 6px;
   background: url(../images/Trash.svg) no-repeat 6px;
 }
 .button-trash button:hover {
-  background-color: olive;
+  border: 2px solid #007BFF;
+}
+
+.button {
+  margin-top: -5px;
+}
+.button button {
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-weight: 500;
+  background: #007BFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  box-shadow: none;
+  text-shadow: none;
+}
+.button button:hover {
+  color: #000;
+  border: 1px solid #007BFF;
+}
+
+.small-button {
+  margin-top: 22px;
+}
+.small-button button {
+  width: 30%;
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-weight: 500;
+  background: #007BFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  box-shadow: none;
+  text-shadow: none;
+}
+.small-button button:hover {
+  color: #000;
+  border: 1px solid #007BFF;
+}
+
+.text {
+  margin-left: 5.5px;
+  padding-bottom: 18px;
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 1px solid #E4E4E4;
+}
+.text p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #969696;
+}
+.text a {
+  padding-left: 4px;
+  font-family: "Inter";
+  font-weight: 400;
+  color: #007BFF;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.registration {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+  gap: 18px;
+}
+.registration p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #545454;
+}
+.registration a {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #007BFF;
 }
