@@ -1,0 +1,301 @@
+$base-size: 16;
+$text-color: #565656;
+$text-color2: #7B7B7B;
+@mixin fz($size_px) {
+  font-size: ($size_px / $base-size) * 1rem;
+}
+@mixin lato {
+  font-family: 'Lato';
+  font-weight: 400;
+  letter-spacing: 0.05em;
+    
+}
+@mixin red {
+    font-family: 'Red Hat Display';
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include fz(16);
+  font-family:  sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+  transition: all 2s ease;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+#header {
+  
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 0;
+  }
+  .main-menu {
+    gap: 38px;
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: 400;
+    @include fz(14);
+    line-height: 17px;
+    letter-spacing: 0.3em;
+    color: #000;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+      left: 12px;
+      height: 1px;
+      width: 0;
+      background-color: #000;
+      transition: all .4s ease;
+  }
+  &:hover{
+    &::after{
+      width:  calc(100% - 25px);
+    }
+  }
+  }
+  .nav-wrap {
+    
+    display: flex;
+    gap: 80px;
+    
+  }
+}
+.btn-wrap {
+  
+  .btn {
+    background-color: transparent;
+    border: none;
+  }
+}
+a {
+  text-decoration: none;
+  
+  
+}
+h1 {
+  font-family: 'Red Hat Display';
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 48px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  @include red();
+  @include fz(23);
+  line-height: 38px;
+  
+}
+
+.info-wrap {
+  p, span {
+    @include lato();
+    @include fz(16);
+    line-height: 27px;
+    
+
+  }
+  p {
+    color: $text-color;
+  }
+  span {
+    color: $text-color2;
+    letter-spacing: 0.1em;
+  }
+}
+
+main {
+  padding-top: 100px;
+  display: flex;
+  gap: 90px;
+  flex-direction: column;
+}
+
+.section-1 {
+  
+  background: #cde8e8 url(../images/bg-image.png) center center/cover no-repeat;
+  height: 39.16vw;
+  .container {
+    height: 100%;
+    padding-top: 6.94vw ;
+  }
+  .title {
+    max-width: 770px;
+    width: 100%;
+    h1 {
+      font-family: 'Red Hat Display';
+      @include fz(48);
+      line-height: 64px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    
+  }
+  
+}
+
+
+
+
+.section-2 {
+  h1 {
+    font-family: 'Red Hat Display';
+    @include fz(48);
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+  }
+  .info-wrap {
+   padding-top: 84px;
+   width: 100%;
+   
+  }
+  .image-wrap {
+    max-width: 570px;
+    width: 100%;
+   }
+  
+  .content {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+    // gap: 30px;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+  }
+}
+
+.section-3 {
+  h3 {
+    @include red();
+    @include fz(22);
+    line-height: 37px;
+  }
+  
+  .post-wrapper {
+    display: flex;
+    gap: 30px;
+  }
+  .small {
+    display: flex;
+    
+  }
+}
+.section-4 {
+  h3 {
+    @include red();
+    @include fz(24);
+    line-height: 40px;
+  }
+  .content {
+    display: flex;
+    gap: 30px;
+  } 
+  .small {
+    display: flex;
+  }
+  .content-first, 
+  .content-second {
+    max-width: 570px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .info-wrap {
+      display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+  }
+}
+.section-5 {
+  
+  .small-text {
+    font-family: 'Red Hat Display';
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text {
+    @include lato();
+    @include fz(19);
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: $text-color;
+    max-width: 470px;
+
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    height: 60px;
+  }
+  main {
+    padding-top: 60px;
+    
+  }
+  .section-1 {
+    height: calc(100vh - 60px) ;
+  }
+}
+
+.post-wrapper {
+  .post {
+    max-width: 370px;
+    width: 100%;
+  }
+}

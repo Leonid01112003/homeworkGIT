@@ -1,0 +1,262 @@
+$base-size: 16;
+$main-color: #8B8C8C;
+$nav-color: #2D2F30;
+$blue-color: #094B72;
+$text-color: #4F4F4F;
+@mixin fz($size_px) {
+  font-size: ($size_px / $base-size) * 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include fz(16);
+  font-family: Poppins, sans-serif;
+  color: $text-color;
+}
+.playfair{
+  font-family: 'Playfair Display', serif;
+}
+.jakarta{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+a, button {
+  cursor: pointer;
+  transition: all .7s ease;
+}
+
+ul, ol {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+  }
+}
+.menu-search-wrap{
+  display: flex;
+  gap: 110px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main-menu{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  a{
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include fz(12);
+    color: $nav-color;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: 10px;
+      left: 12px;
+      height: 1px;
+      width: 0;
+      background-color: $nav-color;
+      transition: all .2s ease;
+  }
+  &:hover{
+    &::after{
+      width:  calc(100% - 24px);
+    }
+  }
+}
+}
+.search-btn{
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  path{
+    stroke: #2D2F30;
+  }
+  &:hover{
+    path{
+      stroke: $blue-color;
+    }
+  }
+
+}
+main {
+  padding-top: 100px;
+
+}
+.first-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  max-width: 750px;
+  gap: 115px ;
+}
+#first-section {
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .suptitle-text {
+    display: inline-block;
+    height: 40px;
+    line-height: 28px;
+    padding: 6px 21px 6px 6px;
+    background-color: #E7F6FF;
+    border-radius: 20px;
+    @include fz(14);
+    color: #193E6C;
+    margin-bottom: 16px;
+    span {
+      display: inline-block;
+      background-color: $blue-color;
+      height: 28px;
+      line-height: 28px;
+      border-radius: 14px;
+      color: #fff;
+      padding: 0 29px;
+      margin-right: 5px;
+    }
+  }
+  .subtitle-text {
+    width: 100%;
+    max-width: 590px;
+    @extend .jakarta;
+    font-weight: 500;
+    @include fz(24);
+    line-height: 158%;
+    letter-spacing: 0.5px;
+    margin-bottom: 42px;
+
+  }
+  .first-content {
+    p {
+      @extend .jakarta;
+      @include fz(22);
+      color: #8B8C8C;
+      margin-bottom: 34px;
+    }
+    .company-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+      width: 240px;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+  
+  .woman-wrap {
+    margin-top: 45px;
+    position: relative;
+    left: -85px;
+    z-index: -1;
+    align-self: flex-end;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+    &::before {
+      width: 811px;
+      height: 811px;
+
+    }
+    &::after {
+      width: 633px;
+      height: 633px;
+
+    }
+    .name-block {
+      filter: drop-shadow(0px 39px 100px rgba(25, 62, 108, 0.12));
+      background: #FFFFFF;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      max-width: 382px;
+      @extend .jakarta;
+      .name {
+        @include fz(24);
+        @extend .jakarta;
+        font-weight: 700;
+        line-height: 36px;
+
+      }
+      .position {
+        @include fz(16);
+        @extend .jakarta;
+        font-weight: 500;
+        line-height: 36px;
+      }
+    }
+  }
+  
+}
+h1 {
+  font-family: 'Playfair Display';
+  @include fz(90);
+  font-weight: 700;
+  
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: $blue-color;
+  margin-bottom: 46px;
+}
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  height: 80px;
+  line-height: 80px;
+  color: #F9F8F9;
+  padding: 0 36px;
+  background-color: $blue-color;
+  @include fz(16);
+  font-weight: 700;
+  @extend .jakarta;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid $blue-color;
+  &:hover {
+    color: $blue-color;
+    box-shadow: 0 0 0 40px inset #f9f9f9;
+  }
+}

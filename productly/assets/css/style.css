@@ -13,38 +13,63 @@ body {
   background-color: #fff;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
 }
 
+.wrapper {
+  position: relative;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.wrapper img {
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.content {
+  display: flex;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  justify-content: space-between;
+}
+
 .bgc {
   max-width: 1440px;
   margin: 0 auto;
-  width: 90%;
   transform: rotate(180deg);
-  background: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%);
+  background: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%) center center;
   border-start-start-radius: 40%;
   border-start-end-radius: 45%;
 }
 
-.menu {
+.menu-wrap {
   margin-top: 9px;
   margin-bottom: 9px;
-  align-items: center;
-  justify-content: center;
-  margin-right: 184px;
-  margin-left: 196px;
 }
-.menu ul li {
+.menu-wrap ul li {
   text-align: center;
-  display: inline-block;
-  margin-right: 16px;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
   font-family: "Montserrat";
+}
+
+#menu {
+  display: flex;
+  gap: 20px;
+}
+#menu li a:hover {
+  color: #FF9900;
 }
 
 ul li {
@@ -67,7 +92,8 @@ a {
   background-color: #FF9900;
 }
 .button.sign {
-  margin-top: 12px;
+  display: flex;
+  gap: 33px;
 }
 .button.sign a {
   font-family: "Montserrat";
@@ -75,8 +101,7 @@ a {
   line-height: 20px;
 }
 .button.sign a:first-child {
-  padding: 13px 26px 13px 26px;
-  margin-right: 26px;
+  padding: 12px 25px;
 }
 .button.sign a:last-child {
   padding: 13px 22.5px 13px 22.5px;
@@ -103,30 +128,6 @@ a {
 }
 .button.other-button.last-button a {
   padding: 13px 40px 13px 40px;
-}
-
-.wrapper {
-  position: relative;
-  margin-top: 7px;
-  margin-bottom: 7px;
-}
-.wrapper img {
-  object-fit: cover;
-  vertical-align: top;
-}
-.wrapper img:first-child {
-  margin-right: 8px;
-}
-
-#header .container {
-  display: flex;
-}
-
-.content {
-  display: flex;
-  margin-top: 17px;
-  margin-bottom: 17px;
-  min-width: 1200px;
 }
 
 .section_1 {
@@ -200,6 +201,10 @@ a {
   margin-bottom: 10px;
   margin-top: 30px;
 }
+.section_2 .h1-icons {
+  text-align: center;
+  max-width: 550px;
+}
 
 .section_3 {
   margin-top: 120px;
@@ -244,11 +249,11 @@ a {
   margin-top: 97px;
 }
 .section_4 .text {
-  margin-left: 125px;
   margin-top: 48px;
 }
 .section_4 .container {
   display: flex;
+  gap: 125px;
 }
 .section_4 span, .section_4 p {
   font-family: "Montserrat";
@@ -284,19 +289,24 @@ a {
 .section_4 h1 {
   margin-bottom: 20px;
 }
-.section_4 .tick-wrapper {
+.section_4 .tick {
   margin-top: 48px;
 }
-.section_4 span {
-  display: inline-block;
-  position: relative;
-  position: absolute;
-  margin-top: -8px;
-  margin-left: 30px;
+.section_4 .flex {
+  display: flex;
+  gap: 30px;
+}
+.section_4 .tick-wrapper {
+  height: 35px;
+  width: 35px;
+}
+.section_4 .tick-wrapper img {
+  object-fit: cover;
+  vertical-align: top;
 }
 
 .section_5 {
-  margin-top: 92px;
+  margin-top: 73px;
 }
 .section_5 .container {
   display: flex;
@@ -337,20 +347,36 @@ a {
 }
 
 footer {
-  margin-top: 166px;
+  border-top: 1px solid #BCD0E5;
+  margin-top: 97px;
 }
-footer .forms h3 {
+footer .forms .form-elem input {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+}
+footer .forms .form-elem input::placeholder {
+  padding: 8px;
+  line-height: 19.5px;
+  color: #BCD0E5;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+}
+footer .forms .h3-wrapper {
   margin-bottom: 25px;
+  padding-right: 79px;
 }
 footer .container {
+  padding-top: 70px;
   display: flex;
   justify-content: space-between;
 }
-footer .container .margin {
-  margin-right: 130px;
-}
-footer .logo-wrapper {
-  margin-right: 130px;
+footer h3 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
 }
 footer ul li a {
   font-family: "Montserrat";
@@ -363,6 +389,9 @@ footer .links ul li, footer .legal ul li {
 }
 footer .links h3, footer .legal h3 {
   margin-bottom: 30px;
+}
+footer .links ul {
+  padding-right: 59px;
 }
 footer .button {
   margin-top: 25px;

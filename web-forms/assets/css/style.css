@@ -145,9 +145,13 @@ select:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .name-form {
     flex-direction: column;
+  }
+
+  .container {
+    padding: 30px;
   }
 }
 .name-form {

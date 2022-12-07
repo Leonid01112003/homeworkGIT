@@ -15,21 +15,22 @@ html, body {
   margin: 0 auto;
 }
 
-header {
-  margin-top: 13px;
-  margin-bottom: 13px;
-}
-
 .h2 {
-  margin-top: 62px;
+  display: flex;
+  margin-top: 60px;
   margin-bottom: 39px;
 }
 .h2 small {
+  position: relative;
+  left: 9px;
+  top: -2px;
   font-family: "Farro";
   font-style: normal;
   font-weight: 300;
+  font-size: 19px;
+  line-height: 20px;
 }
-.h2 span {
+.h2 h2 {
   font-family: "Francois One";
   font-style: normal;
   font-weight: 400;
@@ -55,7 +56,7 @@ i {
 }
 
 p:last-child {
-  margin-top: 40px;
+  margin-top: 33px;
 }
 
 ul li {
@@ -74,28 +75,33 @@ ul li {
 a {
   color: #000000;
 }
+a:hover {
+  border-radius: 5px;
+  box-shadow: inset lightgray 3px 5px 6px 1px;
+}
 
 .navigation {
+  margin-left: 3px;
   margin-top: 17px;
   margin-bottom: 10px;
 }
 .navigation a {
   text-decoration: none;
 }
+.navigation li {
+  font-size: 24px;
+  line-height: 27.5px;
+}
 .navigation li:nth-of-type(3) {
   font-family: "Staatliches";
-  font-size: 22px;
-  line-height: 27.5px;
 }
 .navigation li:nth-of-type(2) {
   font-family: "Staatliches";
-  font-size: 22px;
-  line-height: 27.5px;
 }
 .navigation li:nth-of-type(2)::after {
   content: "/";
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 6px;
 }
 .navigation li:nth-child(1) {
   margin-right: 50px;
@@ -106,15 +112,27 @@ a {
   line-height: 18px;
 }
 
-mark {
-  background-color: lightgray;
-  padding: 5px;
+.image-wrapper {
+  margin-left: 597px;
+  margin-top: 4px;
 }
 
-.introduction {
-  margin-top: -4px;
+mark {
+  background-color: lightgray;
+  padding: 5px 3px;
+  position: relative;
 }
 
 .header_container {
-  margin-bottom: 77px;
+  margin-bottom: 80px;
+}
+
+.text {
+  position: relative;
+  top: 9px;
+}
+
+.last {
+  position: relative;
+  top: 12px;
 }

@@ -13,27 +13,31 @@ html,body {
     width: 90%;
     margin: 0 auto;
 }
-header {
-    margin-top: 13px;
-    margin-bottom: 13px;
 
-}
 
 .h2 {
-    margin-top: 62px;
+    display: flex;
+    margin-top: 60px;
     margin-bottom: 39px;
     small {
+    position: relative;
+    left: 9px;
+    top: -2px;
     font-family: 'Farro';
     font-style: normal;
     font-weight: 300;
+    font-size: 19px;
+    line-height: 20px;
     }
-    span {
+    h2 {
         font-family: 'Francois One';
     font-style: normal;
     font-weight: 400;
     font-size: 39px;
     line-height: 48px;
     text-transform: uppercase;
+    
+    
     
     }
     
@@ -43,10 +47,7 @@ p {
     font-weight: 400;
     font-size: 28px;
     line-height: 48px;
-    margin-bottom: 30px;
-    
-    
-    
+    margin-bottom: 30px; 
 }
 i {
     font-style: italic;
@@ -58,7 +59,7 @@ i {
  
 
 p:last-child {
-    margin-top: 40px;
+    margin-top: 33px;
 }
 ul li {
     list-style: none;
@@ -73,28 +74,37 @@ ul li {
 }
 a {
     color: #000000;
+    
+    &:hover {
+        border-radius: 5px;
+        box-shadow: inset lightgray 3px 5px 6px 1px;
+    }
 }
 .navigation {
-    margin-top: 17px;
-    margin-bottom: 10px;
+    
     a {
         text-decoration: none;
     }
+    margin-left: 3px;
+    margin-top: 17px;
+    margin-bottom: 10px;
     
+    li {
+        font-size: 24px;
+        line-height: 27.5px;
+    }
     li:nth-of-type(3) {
         font-family: 'Staatliches';
-        font-size: 22px;
-        line-height: 27.5px;
+        
 
     }
     li:nth-of-type(2) {
         font-family: 'Staatliches';
-        font-size: 22px;
-        line-height: 27.5px;
+        
         &::after {
             content: "/";
             margin-left: 10px;
-            margin-right: 10px;
+            margin-right: 6px;
 
         }
     }
@@ -108,13 +118,28 @@ a {
 
     }
 }
+.image-wrapper {
+    margin-left: 597px;
+    margin-top: 4px;
+}
 mark {
     background-color: lightgray;
-    padding: 5px;
+    padding: 5px 3px;
+    position: relative;
+    
+    
 }
 .introduction {
-    margin-top: -4px;
+    
 }
 .header_container {
-    margin-bottom: 77px;
+    margin-bottom: 80px;
+}
+.text {
+   position: relative;
+   top: 9px;
+}
+.last {
+    position: relative;
+    top: 12px;
 }
