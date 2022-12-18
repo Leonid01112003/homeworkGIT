@@ -1,0 +1,253 @@
+
+@media screen and (max-width: 768px) {
+    #header {
+      height: 60px;
+      .container {
+        padding: 20px 0;
+        .btn-wrap {
+          gap: 20px;
+        }
+      }
+      
+      
+    }
+    .section-2 {
+      .text {
+        margin-top: 10px;
+      }
+     
+        
+      
+      
+      .info-wrap {
+        padding-top: 0;
+      }
+    }
+    
+    img {
+      object-fit: contain;
+      
+    }
+    main {
+      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 70px;
+    }
+    .section-1 {
+      .container {
+        padding-top: 3.74vw;
+      }
+      height: 41.7vw;
+        
+      .title {
+        max-width: 649px;
+        h1 {
+          font-size: 36px;
+          line-height: 50px;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+    .section-3 {
+      .small {
+        margin-top: 0;
+      }
+      .post-wrapper {
+        display: flex;
+        flex-direction: column;
+        
+        .post {
+          max-width: none;
+          gap: 20px;
+          &.reverse {
+            flex-direction: row;
+          }
+          display: flex;
+         
+          .info-wrap {
+            max-width: 340px;
+          }
+        }
+      }
+    }
+    .section-4 {
+      margin-top: 0;
+        .content {
+          gap: 20px;
+        }
+      .button-wrap {
+        padding-top: 63px;
+      }
+     
+    }
+    .section-5 {
+      .container {
+        flex-direction: column;
+        gap: 70px;
+        .text {
+          &.right {
+            max-width: none;
+            text-align: right;
+          }
+        }
+      }
+    }
+    footer {
+      margin-top: 70px;
+      .footer {
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        .fonts {
+          padding-top: 0;
+          padding-bottom: 40px;
+        }
+      }
+      .info {
+        text-align: center;
+      }
+      
+    }
+  }
+  
+  
+  @media screen and (max-width: 780px) {
+    #header {
+      .navigation {
+        display: none;
+      } 
+      .btn-wrap {
+        .hamburger {
+          display: block;
+          bottom: 3px;
+        }
+      }
+    }
+    
+  }
+
+  
+
+ @media screen and(max-width: 500px) {
+  .section-1 {
+    height: 70vw;
+  }
+ }
+ @media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  main,
+   .content,
+  .top,
+  .post {
+    flex-direction: column;
+  }
+  .top {
+    .view-all {
+      right: 0;
+      top: 10px;
+    }
+  }
+  .section-1 {
+ background: url(../images/bg-image320.png) center center / cover no-repeat ;
+height: 156vw;
+
+    .title {
+      h1 {
+        font-size: 30px;
+        line-height: 50px;
+      }
+    }
+  }
+  .section-2 {
+    .main-title {
+      h1 {
+        text-align: center;
+      }
+    }
+    h2 {
+      font-size: 22px;
+      line-height: 37px;
+      
+    }
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+  .section-3 {
+    .container {
+      .post-wrapper {
+        gap: 50px;
+      }
+      .post.reverse {
+        flex-direction: column-reverse;
+       }
+    }
+    
+  }
+ 
+  .section-4 {
+    .container {
+      .content {
+        gap: 50px;
+      }
+    }
+    .content-second {
+      p.display {
+        display: block;
+      }
+      .text {
+        
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+  
+      }
+    }
+  }
+  .content {
+    gap: 30px;
+    &.first {
+      flex-direction: column-reverse;
+    }
+  }
+  
+
+  .section-5 {
+    .container {
+      gap: 50px;
+      .text.right {
+        text-align: center;
+      }
+    }
+    
+  }
+  footer {
+    .footer {
+      
+      .title {
+        text-align: center;
+        h1 {
+          font-size: 32px;
+          line-height: 42px;
+        }
+      }
+      
+    }
+    .last p {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+}

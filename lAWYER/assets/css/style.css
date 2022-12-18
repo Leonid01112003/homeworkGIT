@@ -11,7 +11,7 @@ html, body {
 
 body {
   font-size: 1rem;
-  font-family: Poppins, sans-serif;
+  font-family: sans-serif;
   color: #4F4F4F;
 }
 
@@ -25,7 +25,7 @@ body {
 
 a, button {
   cursor: pointer;
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
 }
 
 ul, ol {
@@ -211,7 +211,7 @@ main {
   line-height: 36px;
 }
 
-h1 {
+.first-top h1 {
   font-family: "Playfair Display";
   font-size: 5.625rem;
   font-weight: 700;
@@ -240,4 +240,44 @@ h1 {
 .btn:hover {
   color: #094B72;
   box-shadow: 0 0 0 40px inset #f9f9f9;
+}
+
+#second-section {
+  margin-top: 100px;
+}
+#second-section .container {
+  display: flex;
+  gap: 53px;
+}
+#second-section .left {
+  max-width: 420px;
+}
+#second-section .left .title h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 64px;
+  letter-spacing: 0.323077px;
+}
+#second-section .left .text p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+}
+#second-section .right {
+  max-width: 550px;
+}
+#second-section .right .title {
+  margin-bottom: 10px;
+}
+#second-section .menu {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#second-section .menu li {
+  max-width: 256px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 24px;
 }

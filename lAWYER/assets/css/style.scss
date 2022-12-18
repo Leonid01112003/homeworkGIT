@@ -20,7 +20,7 @@ html, body {
 
 body {
   @include fz(16);
-  font-family: Poppins, sans-serif;
+  font-family: sans-serif;
   color: $text-color;
 }
 .playfair{
@@ -31,7 +31,7 @@ body {
 }
 a, button {
   cursor: pointer;
-  transition: all .7s ease;
+  transition: all .5s ease;
 }
 
 ul, ol {
@@ -229,16 +229,19 @@ main {
   }
   
 }
-h1 {
-  font-family: 'Playfair Display';
-  @include fz(90);
-  font-weight: 700;
-  
-  line-height: 120%;
-  letter-spacing: 0.02em;
-  color: $blue-color;
-  margin-bottom: 46px;
+.first-top {
+  h1 {
+    font-family: 'Playfair Display';
+    @include fz(90);
+    font-weight: 700;
+    
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: $blue-color;
+    margin-bottom: 46px;
+  }
 }
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -258,5 +261,53 @@ h1 {
   &:hover {
     color: $blue-color;
     box-shadow: 0 0 0 40px inset #f9f9f9;
+  }
+}
+#second-section {
+  margin-top: 100px;
+  .container {
+    display: flex;
+    gap: 53px;
+    
+  }
+  .left {
+    max-width: 420px;
+    .title {
+      h1 {
+        font-weight: 700;
+      @include fz(48);
+      line-height: 64px;
+      letter-spacing: 0.323077px;
+      }
+    }
+    .text {
+      p {
+        
+        @include fz(20);
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 0.5px;
+      }
+      
+    }
+  }
+  .right {
+    max-width: 550px;
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .menu {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+   
+    li {
+      max-width: 256px;
+      border: 1px solid;
+      border-radius: 8px;
+      padding: 24px;
+    }
   }
 }

@@ -1,3 +1,203 @@
-@media screen {
-    
+@media screen and (max-width: 768px) {
+  #header {
+    height: 60px;
+  }
+  #header .container {
+    padding: 20px 0;
+  }
+  #header .container .btn-wrap {
+    gap: 20px;
+  }
+
+  .section-2 .text {
+    margin-top: 10px;
+  }
+  .section-2 .info-wrap {
+    padding-top: 0;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  main {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 70px;
+  }
+
+  .section-1 {
+    height: 41.7vw;
+  }
+  .section-1 .container {
+    padding-top: 3.74vw;
+  }
+  .section-1 .title {
+    max-width: 649px;
+  }
+  .section-1 .title h1 {
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  .container {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .section-3 .small {
+    margin-top: 0;
+  }
+  .section-3 .post-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-3 .post-wrapper .post {
+    max-width: none;
+    gap: 20px;
+    display: flex;
+  }
+  .section-3 .post-wrapper .post.reverse {
+    flex-direction: row;
+  }
+  .section-3 .post-wrapper .post .info-wrap {
+    max-width: 340px;
+  }
+
+  .section-4 {
+    margin-top: 0;
+  }
+  .section-4 .content {
+    gap: 20px;
+  }
+  .section-4 .button-wrap {
+    padding-top: 63px;
+  }
+
+  .section-5 .container {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .section-5 .container .text.right {
+    max-width: none;
+    text-align: right;
+  }
+
+  footer {
+    margin-top: 70px;
+  }
+  footer .footer {
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  footer .footer .fonts {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  footer .info {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 780px) {
+  #header .navigation {
+    display: none;
+  }
+  #header .btn-wrap .hamburger {
+    display: block;
+    bottom: 3px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section-1 {
+    height: 70vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  main,
+.content,
+.top,
+.post {
+    flex-direction: column;
+  }
+
+  .top .view-all {
+    right: 0;
+    top: 10px;
+  }
+
+  .section-1 {
+    background: url(../images/bg-image320.png) center center/cover no-repeat;
+    height: 156vw;
+  }
+  .section-1 .title h1 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .section-2 .main-title h1 {
+    text-align: center;
+  }
+  .section-2 h2 {
+    font-size: 22px;
+    line-height: 37px;
+  }
+  .section-2 .title {
+    margin-bottom: 10px;
+  }
+
+  .section-3 .container .post-wrapper {
+    gap: 50px;
+  }
+  .section-3 .container .post.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .section-4 .container .content {
+    gap: 50px;
+  }
+  .section-4 .content-second p.display {
+    display: block;
+  }
+  .section-4 .content-second .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    gap: 30px;
+  }
+  .content.first {
+    flex-direction: column-reverse;
+  }
+
+  .section-5 .container {
+    gap: 50px;
+  }
+  .section-5 .container .text.right {
+    text-align: center;
+  }
+
+  footer .footer .title {
+    text-align: center;
+  }
+  footer .footer .title h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  footer .last p {
+    font-size: 16px;
+    line-height: 27px;
+  }
 }
