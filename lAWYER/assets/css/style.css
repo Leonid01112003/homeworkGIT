@@ -114,11 +114,13 @@ main {
 
 .first-content {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   width: 100%;
   max-width: 750px;
   gap: 115px;
+}
+.first-content h1 {
+  margin-left: 6px;
 }
 
 #first-section .container {
@@ -148,18 +150,27 @@ main {
   margin-right: 5px;
 }
 #first-section .subtitle-text {
+  margin-left: 13px;
   width: 100%;
   max-width: 590px;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 158%;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   margin-bottom: 42px;
+}
+#first-section .button-wrap {
+  margin-left: 8px;
+}
+#first-section .first-bottom {
+  margin-left: 10px;
 }
 #first-section .first-content p {
   font-size: 1.375rem;
   color: #8B8C8C;
   margin-bottom: 34px;
+  letter-spacing: 0.04em;
+  line-height: 31px;
 }
 #first-section .first-content .company-list {
   display: flex;

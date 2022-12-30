@@ -1,0 +1,16 @@
+@media screen and (max-width: 770px) {
+  #header {
+    height: 60px;
+  }
+  #header .title {
+    padding: 18px 0;
+  }
+
+  .container {
+    max-width: 701px;
+  }
+
+  .first-section {
+    margin-top: 50px;
+  }
+}

@@ -118,8 +118,11 @@ main {
 
 }
 .first-content {
+  h1 {
+    margin-left: 6px;
+  }
   display: flex;
-  justify-content: space-between;
+  
   flex-direction: column;
   width: 100%;
   max-width: 750px;
@@ -153,15 +156,22 @@ main {
     }
   }
   .subtitle-text {
+    margin-left: 13px;
     width: 100%;
     max-width: 590px;
     @extend .jakarta;
     font-weight: 500;
     @include fz(24);
     line-height: 158%;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     margin-bottom: 42px;
 
+  }
+  .button-wrap {
+    margin-left: 8px;
+  }
+  .first-bottom {
+    margin-left: 10px;
   }
   .first-content {
     p {
@@ -169,6 +179,8 @@ main {
       @include fz(22);
       color: #8B8C8C;
       margin-bottom: 34px;
+      letter-spacing: 0.04em;
+      line-height: 31px;
     }
     .company-list {
       display: flex;

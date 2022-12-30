@@ -1,0 +1,348 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+body {
+  font-size: 1rem;
+}
+
+a, button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.background {
+  height: 56vw;
+  background: url(../image/HeaderBackground.png) center center/cover no-repeat;
+}
+
+.search__form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+.search__container {
+  margin-top: 48px;
+  background: #fff;
+  max-width: 647px;
+  padding: 5px 3px 5px 35px;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.search__input {
+  border: none;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  color: #999999;
+  width: 100%;
+}
+.search__input:focus-visible {
+  outline: none;
+}
+
+.header-top {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 719px;
+  text-align: center;
+  margin-top: 295px;
+}
+.header-top .suptitle {
+  margin-top: 8px;
+  position: relative;
+  left: 3px;
+}
+.header-top h1 {
+  font-family: "Josefin Sans";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 52px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-top p {
+  font-family: "Josefin Sans";
+  font-size: 1.375rem;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0.31em;
+  color: #fff;
+}
+.header-top .button {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #5373FD;
+  border: none;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header-top .button svg {
+  width: 17px;
+  height: 16px;
+}
+
+.header-bottom {
+  display: flex;
+  background-color: #5373FD;
+  height: 84px;
+}
+.header-bottom h1 {
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-bottom a {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-bottom .container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+.header-bottom ul {
+  display: flex;
+  gap: 40px;
+}
+
+.section1 {
+  height: 45.6vw;
+  background-image: url(../image/WhyBackground2sec.png);
+}
+.section1 h2 {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 40px;
+  color: #fff;
+}
+.section1 p {
+  font-family: "Josefin Sans";
+  font-size: 16;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.section1 .top {
+  display: flex;
+  gap: 136px;
+}
+.section1 .info {
+  max-width: 648px;
+}
+.section1 .info .suptitle {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section1 .left {
+  margin-top: 190px;
+}
+.section1 .right {
+  margin-top: 124px;
+  max-width: 424px;
+  width: 100%;
+}
+.section1 .right .image-wrap:first-child {
+  margin-bottom: 16px;
+}
+.section1 .bottom .line {
+  display: block;
+  position: absolute;
+  width: 436px;
+  height: 90px;
+  left: calc(50% - 872px/2);
+  opacity: 0.5;
+  border-top: 1px dashed #FFFFFF;
+}
+
+.image-wrap {
+  max-width: 350px;
+  width: 100%;
+}
+.image-wrap.first {
+  float: left;
+}
+.image-wrap.second {
+  float: right;
+}
+
+.section2 {
+  background: url(../image/sec2-back.png) center center/cover no-repeat;
+  height: 44.5vw;
+}
+
+.section2 .info, .section3 .info {
+  position: relative;
+  top: 220px;
+  padding: 44px 32px;
+  max-width: 648px;
+  width: 100%;
+  background: #232323;
+}
+.section2 .suptitle, .section3 .suptitle {
+  max-width: 584px;
+  width: 100%;
+}
+.section2 .suptitle p, .section3 .suptitle p {
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.section2 span, .section3 span {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.section2 h2, .section3 h2 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+}
+.section2 .button-wrap button, .section3 .button-wrap button {
+  padding: 20px 56px;
+  background-color: #5373FD;
+  margin-top: 24px;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.section2 .text, .section3 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section3 {
+  background: url(../image/sec3-back.png) center center/cover no-repeat;
+  height: 44.5vw;
+}
+.section3 .info {
+  float: right;
+  position: relative;
+  top: 220px;
+}
+
+.section4 {
+  background: url(../image/sec4-back.png) center center/cover no-repeat;
+  height: 44.3vw;
+}
+.section4 .container {
+  padding-top: 120px;
+}
+.section4 .image-wrap {
+  max-width: 440px;
+  width: 100%;
+}
+.section4 .content {
+  display: flex;
+}
+.section4 .title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section4 h1 {
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 40px;
+  color: #fff;
+}
+.section4 .right {
+  background-color: #333333;
+  padding: 48px 60px;
+  max-width: 880px;
+  width: 100%;
+}
+.section4 .right h3 {
+  font-family: "Josefin Sans";
+  font-size: 1.25rem;
+  line-height: 28px;
+  color: #fff;
+}
+.section4 .right p {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.section4 .right .title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.section4 .right .suptitle {
+  max-width: 760px;
+}
