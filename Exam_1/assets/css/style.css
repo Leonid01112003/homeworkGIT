@@ -42,6 +42,29 @@ ul, ol {
   flex-direction: column;
   justify-content: space-between;
 }
+#header .scroll-down {
+  margin-top: 211px;
+  position: relative;
+  text-align: center;
+  font-family: "Josefin Sans";
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+}
+#header .scroll-down a {
+  color: #fff;
+}
+#header .scroll-down::after {
+  content: "";
+  margin-left: -6px;
+  width: 8px;
+  height: 8px;
+  border-right: 3.5px solid #fff;
+  border-bottom: 3.5px solid #fff;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
 
 .background {
   height: 56vw;
@@ -123,6 +146,10 @@ ul, ol {
 .header-top .button svg {
   width: 17px;
   height: 16px;
+  fill: #fff;
+}
+.header-top a {
+  transition: all 0.5 ease;
 }
 
 .header-bottom {
@@ -159,9 +186,22 @@ ul, ol {
   gap: 40px;
 }
 
+main .button-wrap button {
+  background-color: #5373FD;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+}
+
 .section1 {
   height: 45.6vw;
-  background-image: url(../image/WhyBackground2sec.png);
+  background: url(../image/WhyBackground2sec.png) center center/cover no-repeat;
 }
 .section1 h2 {
   font-family: "Aleo";
@@ -178,18 +218,22 @@ ul, ol {
   letter-spacing: 0.1em;
   color: #fff;
 }
-.section1 .top {
+.section1 button {
+  padding: 20px 33px;
+}
+.section1 .container {
   display: flex;
   gap: 136px;
 }
 .section1 .info {
   max-width: 648px;
+  margin-bottom: 33px;
 }
 .section1 .info .suptitle {
-  margin-top: 24px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 27px;
 }
 .section1 .left {
   margin-top: 190px;
@@ -201,15 +245,6 @@ ul, ol {
 }
 .section1 .right .image-wrap:first-child {
   margin-bottom: 16px;
-}
-.section1 .bottom .line {
-  display: block;
-  position: absolute;
-  width: 436px;
-  height: 90px;
-  left: calc(50% - 872px/2);
-  opacity: 0.5;
-  border-top: 1px dashed #FFFFFF;
 }
 
 .image-wrap {
@@ -224,11 +259,50 @@ ul, ol {
 }
 
 .section2 {
+  background-color: #333333;
+}
+.section2 .container {
+  padding-top: 23px;
+  padding-bottom: 60px;
+}
+.section2 ul li {
+  max-width: 424px;
+  width: 100%;
+}
+.section2 svg {
+  stroke: #fff;
+  width: 100%;
+}
+.section2 .dash-arrows {
+  height: 104px;
+}
+.section2 .text {
+  padding-top: 10px;
+}
+.section2 .icons {
+  display: flex;
+  gap: 27px;
+  font-family: "Aleo";
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+}
+.section2 .icons svg {
+  width: 64px;
+  height: 64px;
+}
+.section2 .icons svg:first-child {
+  fill: #5373FD;
+}
+
+.section3 {
   background: url(../image/sec2-back.png) center center/cover no-repeat;
   height: 44.5vw;
 }
 
-.section2 .info, .section3 .info {
+.section3 .info, .section4 .info {
   position: relative;
   top: 220px;
   padding: 44px 32px;
@@ -236,11 +310,11 @@ ul, ol {
   width: 100%;
   background: #232323;
 }
-.section2 .suptitle, .section3 .suptitle {
+.section3 .suptitle, .section4 .suptitle {
   max-width: 584px;
   width: 100%;
 }
-.section2 .suptitle p, .section3 .suptitle p {
+.section3 .suptitle p, .section4 .suptitle p {
   font-family: "Josefin Sans";
   font-weight: 300;
   font-size: 1rem;
@@ -248,7 +322,7 @@ ul, ol {
   letter-spacing: 0.1em;
   color: #fff;
 }
-.section2 span, .section3 span {
+.section3 span, .section4 span {
   font-family: "Josefin Sans";
   font-size: 1.25rem;
   font-weight: 300;
@@ -256,7 +330,7 @@ ul, ol {
   letter-spacing: 0.1em;
   color: #fff;
 }
-.section2 h2, .section3 h2 {
+.section3 h2, .section4 h2 {
   font-family: "Josefin Sans";
   font-size: 1.25rem;
   line-height: 28px;
@@ -264,73 +338,64 @@ ul, ol {
   text-transform: uppercase;
   color: #fff;
 }
-.section2 .button-wrap button, .section3 .button-wrap button {
+.section3 .button-wrap button, .section4 .button-wrap button {
   padding: 20px 56px;
-  background-color: #5373FD;
   margin-top: 24px;
-  font-family: "Aleo";
-  font-weight: 400;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #fff;
 }
-.section2 .text, .section3 .text {
+.section3 .text, .section4 .text {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.section3 {
+.section4 {
   background: url(../image/sec3-back.png) center center/cover no-repeat;
   height: 44.5vw;
 }
-.section3 .info {
+.section4 .info {
   float: right;
   position: relative;
   top: 220px;
 }
 
-.section4 {
+.section5 {
   background: url(../image/sec4-back.png) center center/cover no-repeat;
   height: 44.3vw;
 }
-.section4 .container {
+.section5 .container {
   padding-top: 120px;
 }
-.section4 .image-wrap {
+.section5 .image-wrap {
   max-width: 440px;
   width: 100%;
 }
-.section4 .content {
+.section5 .content {
   display: flex;
 }
-.section4 .title {
+.section5 .title {
   text-align: center;
   margin-bottom: 60px;
 }
-.section4 h1 {
+.section5 h1 {
   font-family: "Aleo";
   font-weight: 400;
   font-size: 2.25rem;
   line-height: 40px;
   color: #fff;
 }
-.section4 .right {
+.section5 .right {
   background-color: #333333;
   padding: 48px 60px;
   max-width: 880px;
   width: 100%;
 }
-.section4 .right h3 {
+.section5 .right h3 {
   font-family: "Josefin Sans";
   font-size: 1.25rem;
   line-height: 28px;
   color: #fff;
 }
-.section4 .right p {
+.section5 .right p {
   font-family: "Josefin Sans";
   font-size: 1rem;
   font-weight: 300;
@@ -338,11 +403,64 @@ ul, ol {
   letter-spacing: 0.1em;
   color: #fff;
 }
-.section4 .right .title {
+.section5 .right .title {
   text-transform: uppercase;
   margin-bottom: 10px;
   text-align: left;
 }
-.section4 .right .suptitle {
+.section5 .right .suptitle {
   max-width: 760px;
+}
+.section5 svg {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 5px;
+  margin-top: 5px;
+  bottom: 5px;
+  fill: #5373FD;
+}
+
+footer {
+  padding-bottom: 80px;
+  background-color: #000000;
+}
+footer .container {
+  text-align: center;
+  padding-top: 80px;
+}
+footer .title {
+  margin-bottom: 8px;
+}
+footer .icons-wrapper {
+  max-width: 275px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+footer .icons {
+  display: flex;
+  gap: 33.5px;
+}
+footer .icons a {
+  font-size: 1.875rem;
+  color: #fff;
+}
+footer .icons a:hover {
+  color: #5373FD;
+}
+footer h1 {
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+footer .suptitle {
+  font-family: "Josefin Sans";
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.2em;
+  color: #fff;
 }

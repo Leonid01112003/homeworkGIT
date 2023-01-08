@@ -3,6 +3,8 @@ $base-color: #fff;
 $input-color:  #999999;
 $blue: #5373FD;
 $grey-color: #333333;
+$black-color: #000000;
+
 @mixin fz($size_px) {
   font-size: ($size_px / $base-size) * 1rem;
 }
@@ -60,7 +62,31 @@ ul, ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+  .scroll-down {
+    margin-top: 211px;
+    position: relative;
+    text-align: center;
+    @include josefin();
+    @include fz(14);
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    a {
+      color: $base-color;
+    }
+    &::after {
+
+      content: '';
+      margin-left: -6px;
+      width: 8px;
+      height: 8px;
+      border-right: 3.5px solid #fff;
+      border-bottom: 3.5px solid #fff;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 2px;
+      
+    }
+  }
  
 }
 .background {
@@ -145,7 +171,11 @@ ul, ol {
     svg {
       width: 17px;
       height: 16px;
+      fill: #fff;
     }
+  }
+  a {
+    transition: all .5 ease;
   }
 }
 
@@ -186,8 +216,25 @@ ul, ol {
 
   }
 }
-
+main {
+  .button-wrap {
+    button {
+      background-color: $blue;
+          
+          @include aleo();
+          @include fz(16);
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: $base-color;
+          border: none;
+          
+    }
+  }
+}
 .section1 {
+  
   h2 {
     @include aleo();
     @include fz(36);
@@ -203,19 +250,28 @@ ul, ol {
     color: $base-color;
 
   }
-  height: 45.6vw;
-  background-image: url(../image/WhyBackground2sec.png);
-  .top {
-    display: flex;
-    gap: 136px;
+  button {
+    padding: 20px 33px;
   }
+  height: 45.6vw;
+  background: url(../image/WhyBackground2sec.png) center center / cover no-repeat;
+  
+    
+    .container {
+      display: flex;
+      gap: 136px;
+    }
+
+   
+  
   .info {
     max-width: 648px;
+    margin-bottom: 33px;
     .suptitle {
-      margin-top: 24px;
+      margin-top: 26px;
      display: flex;
      flex-direction: column;
-     gap: 20px;
+     gap: 27px;
     }
   }
   .left {
@@ -229,21 +285,6 @@ ul, ol {
       margin-bottom: 16px;
     }
 }
-
-
-.bottom {
-  .line {
-    display: block;
-    position: absolute;
-    width: 436px;
-    height: 90px;
-    left: calc(50% - 872px/2);
-    
-    opacity: 0.5;
-    border-top: 1px dashed #FFFFFF;
-  }
-}
-  
 }
 .image-wrap {
   &.first {
@@ -256,13 +297,61 @@ ul, ol {
   width: 100%;
 }
 
+///////////////////////== SECTION2  ==////////////////////////////////////////
+
+
 .section2 {
+  .container {
+    padding-top: 23px;
+    padding-bottom: 60px;
+  }
+  background-color: $grey-color;
+    ul li {
+      max-width: 424px;
+      width: 100%;
+    }
+    svg {
+      stroke:#fff;
+      
+      width: 100%;
+      
+    }
+    .dash-arrows {
+      height: 104px;
+    }
+    .text {
+      padding-top: 10px;
+    }
+   .icons {
+    display: flex; 
+    gap: 27px;
+    @include aleo();
+    @include fz(36);
+    line-height: 40px;
+    color: $base-color;
+    text-align: center;
+    svg {
+      width: 64px;
+      height: 64px;
+      &:first-child {
+        fill: #5373FD;
+        
+      }
+    }
+   }
+  }
+
+
+
+///////////////////////== </SECTION2>  ==////////////////////////////////////////
+
+.section3 {
   background: url(../image/sec2-back.png) center center / cover no-repeat ;
   height: 44.5vw;
 
 }
 
-.section2 , .section3 {
+.section3 , .section4 {
   .info {
     position: relative;
     top: 220px;
@@ -306,15 +395,7 @@ ul, ol {
         .button-wrap {
           button {
             padding: 20px 56px ;
-          background-color: $blue;
-          margin-top: 24px;
-          @include aleo();
-          @include fz(16);
-          font-weight: 400;
-          line-height: 20px;
-          letter-spacing: 0.07em;
-          text-transform: uppercase;
-          color: $base-color;
+            margin-top: 24px;
           }
         }
 
@@ -324,7 +405,7 @@ ul, ol {
           gap: 16px;
         }
 }
-.section3 {
+.section4 {
   background: url(../image/sec3-back.png) center center / cover no-repeat;
   height: 44.5vw;
   .info {
@@ -334,7 +415,7 @@ ul, ol {
   }
 }
 
-.section4 {
+.section5 {
   .container {
     padding-top: 120px;
   }
@@ -387,4 +468,80 @@ ul, ol {
       max-width: 760px;
     }
   }
+
+  svg {
+  
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 5px;
+    margin-top: 5px;
+    bottom: 5px;
+    fill: #5373FD;
+  
+  }
 }
+
+footer {
+  padding-bottom: 80px;
+  .container {
+    text-align: center;
+    padding-top: 80px;
+  }
+  background-color: $black-color;
+  .title {
+    margin-bottom: 8px;
+
+  }
+  .icons-wrapper {
+    
+    max-width: 275px;
+    margin:  0 auto;
+    margin-top: 20px;
+  }
+  .icons {
+    display: flex;
+    gap: 33.5px;
+    
+    a {
+      @include fz(30);
+      color: $base-color;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  h1 {
+    text-transform: uppercase;
+    @include josefin();
+    @include fz(24);
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: $base-color;
+  }
+
+  
+    .suptitle {
+      @include josefin();
+    @include fz(14);
+    line-height: 20px;
+    letter-spacing: 0.2em;
+    color: $base-color;
+
+    
+      
+    
+    
+    }
+  
+
+ 
+
+ 
+    
+    
+}
+
+
+

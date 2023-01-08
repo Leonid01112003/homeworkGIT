@@ -299,8 +299,19 @@ function sayHello(){
         
     } 
 
-    
+    // for(let i=2;i<=10;i=i+2){
+    //         console.log(i);
+    // }
 
+    // for(let i=o;i<3;i++){
+    //     alert(`число ${i}!`)
+    // }
+    
+    let i = 0;
+    while(i < 3){
+        console.log(i);
+        i++;
+    }
     
     
     
