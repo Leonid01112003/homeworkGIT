@@ -43,19 +43,81 @@ body {
 
 a, button {
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all .5s ease;
   text-decoration: none;
 }
 
 ul, ol {
   list-style: none;
 }
-
+button {
+  &:hover {
+    color:#565656 ;
+    box-shadow: 0 0 0 40px inset #000;
+    border: 1px solid #565656;
+    transition: all .5s ease;
+  }
+}
 .container {
   width: 90%;
   max-width: 1320px;
   margin: 0 auto;
 }
+
+#mobile-menu {
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #5373FD;
+  box-shadow: 0 0 1px 1px #999;
+  z-index: 1000;
+  width: 576px;
+  height: 300px;
+  transform: translateY(-320px);
+  transition: all .4s ease;
+}
+#mobile-menu.open {
+  transform: translateY(0);
+}
+
+
+#mobile-menu-list  {
+  text-align: center;
+  a {
+    color: $base-color;
+    @include fz(14);
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    @include aleo();
+    text-transform: uppercase;
+  }
+  .main.title {
+    h1 {
+      @include josefin();
+    @include fz(24);
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    }
+    
+    margin-top: 32px;
+    margin-bottom: 56px;
+    text-align: center;
+  }
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  text-transform: uppercase;
+  color: #fff;
+  
+}
+
+
+
+///////////////////////== <HEADER>  ==////////////////////////////////////////
 
 #header {
   width: 100%;
@@ -89,20 +151,28 @@ ul, ol {
   }
  
 }
+
 .background {
   height: 56vw;
   background: url(../image/HeaderBackground.png) center center / cover no-repeat;
 }
 
 .search {
+  
   &__form {
     display: flex;
   flex-direction: row;
   gap: 10px;
   justify-content: space-between;
+  
   }
 
   &__container {
+    &:hover {
+      border-radius: 3px;
+        border: 1px solid $blue;
+      
+    }
     margin-top: 48px;
     background: #fff;
     max-width: 647px;
@@ -200,6 +270,22 @@ ul, ol {
     letter-spacing: 0.1em;
     color: $base-color;
     text-transform: uppercase;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+      left: 12px;
+      height: 1px;
+      width: 0;
+      background-color: #fff;
+      transition: all .4s ease;
+  }
+  &:hover{
+    &::after{
+      width:  calc(100% - 25px);
+    }
+  }
 
   }
   .container {
@@ -216,6 +302,10 @@ ul, ol {
 
   }
 }
+
+///////////////////////== </HEADER>  ==////////////////////////////////////////
+
+
 main {
   .button-wrap {
     button {
@@ -233,6 +323,15 @@ main {
     }
   }
 }
+
+
+
+
+///////////////////////== <SECTION1>  ==////////////////////////////////////////
+
+
+
+
 .section1 {
   
   h2 {
@@ -274,18 +373,20 @@ main {
      gap: 27px;
     }
   }
-  .left {
-    margin-top: 190px;
-  }
-  .right {
-    margin-top: 124px;
-    max-width: 424px;
-    width: 100%;
-    .image-wrap:first-child {
-      margin-bottom: 16px;
+  .container {
+    .left {
+      margin-top: 190px;
     }
-}
-}
+    .right {
+      margin-top: 124px;
+      max-width: 424px;
+      width: 100%;
+      .image-wrap:first-child {
+        margin-bottom: 16px;
+      }
+  }
+  }
+
 .image-wrap {
   &.first {
     float: left;
@@ -296,31 +397,54 @@ main {
   max-width: 350px;
   width: 100%;
 }
+}
+
+
+
+///////////////////////== </SECTION1>  ==////////////////////////////////////////
+
+
 
 ///////////////////////== SECTION2  ==////////////////////////////////////////
 
 
 .section2 {
   .container {
-    padding-top: 23px;
-    padding-bottom: 60px;
+    padding-top: 24px;
+    padding-bottom: 61px;
   }
   background-color: $grey-color;
     ul li {
       max-width: 424px;
       width: 100%;
     }
-    svg {
-      stroke:#fff;
-      
-      width: 100%;
-      
-    }
     .dash-arrows {
-      height: 104px;
+      position: relative;
+      
+      svg {
+        stroke:#fff;
+        
+        width: 872px;
+        height: 144px;
+        
+      }
+    }
+    
+    .dash-arrows {
+      position: relative;
+       top: 12px;
+        height: 104px;
+         max-width: 872px;
+         margin-left: auto;
+         margin-right: auto;
     }
     .text {
       padding-top: 10px;
+    }
+    .icons-wrapper {
+      position: relative; 
+      z-index: 10; 
+      background: #333333;
     }
    .icons {
     display: flex; 
@@ -333,6 +457,7 @@ main {
     svg {
       width: 64px;
       height: 64px;
+      
       &:first-child {
         fill: #5373FD;
         
@@ -345,6 +470,10 @@ main {
 
 ///////////////////////== </SECTION2>  ==////////////////////////////////////////
 
+
+
+///////////////////////== <SECTION3>  ==////////////////////////////////////////
+
 .section3 {
   background: url(../image/sec2-back.png) center center / cover no-repeat ;
   height: 44.5vw;
@@ -353,6 +482,7 @@ main {
 
 .section3 , .section4 {
   .info {
+    opacity: 0.9;
     position: relative;
     top: 220px;
     padding: 44px 32px;
@@ -405,6 +535,14 @@ main {
           gap: 16px;
         }
 }
+
+
+///////////////////////== </SECTION3>  ==////////////////////////////////////////
+
+
+///////////////////////== <SECTION4>  ==////////////////////////////////////////
+
+
 .section4 {
   background: url(../image/sec3-back.png) center center / cover no-repeat;
   height: 44.5vw;
@@ -415,13 +553,20 @@ main {
   }
 }
 
+///////////////////////== </SECTION4>  ==////////////////////////////////////////
+
+
+
+///////////////////////== <SECTION5>  ==////////////////////////////////////////
+
+
 .section5 {
   .container {
     padding-top: 120px;
   }
   background: url(../image/sec4-back.png) center center / cover no-repeat;
   height: 44.3vw;
-  .image-wrap {
+  .left {
     max-width: 440px;
     width: 100%;
   }
@@ -481,6 +626,14 @@ main {
   
   }
 }
+
+
+
+///////////////////////== </SECTION5>  ==////////////////////////////////////////
+
+
+///////////////////////== <FOOTER>  ==////////////////////////////////////////
+
 
 footer {
   padding-bottom: 80px;
@@ -545,3 +698,69 @@ footer {
 
 
 
+.hamburger  {
+  // display: block;
+  position: absolute;
+  right: 18px;
+  margin-top: -4px;
+  display: none;
+  border: none;
+  background: none;
+  position: relative;
+  width: 40px;
+  height: 24px;
+  z-index: 1001;
+  &::before, &::after, span {
+    content: "";
+    display: inline-block;
+     width: 40px;
+     height: 2px;
+     position: absolute;
+     background-color: #fff;
+     transition: all .2s ease;
+     
+
+  }
+  &::before {
+    top: 2px;
+  }
+  span {
+    top: 25px;
+  }
+  &::after {
+    bottom: 8px;
+  }
+  &.active {
+    span {
+      transform: scale(0);
+    }
+    &::before {
+      transform: rotate(-45deg);
+      top: 12px;
+    }
+    &::after {
+      transform: rotate(45deg);
+      bottom: 10px;
+    }
+  }
+}
+
+#shadow {
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  transition: all .7s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#shadow.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}

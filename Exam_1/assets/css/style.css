@@ -22,7 +22,7 @@ body {
 
 a, button {
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   text-decoration: none;
 }
 
@@ -30,10 +30,66 @@ ul, ol {
   list-style: none;
 }
 
+button:hover {
+  color: #565656;
+  box-shadow: 0 0 0 40px inset #000;
+  border: 1px solid #565656;
+  transition: all 0.5s ease;
+}
+
 .container {
   width: 90%;
   max-width: 1320px;
   margin: 0 auto;
+}
+
+#mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #5373FD;
+  box-shadow: 0 0 1px 1px #999;
+  z-index: 1000;
+  width: 576px;
+  height: 300px;
+  transform: translateY(-320px);
+  transition: all 0.4s ease;
+}
+
+#mobile-menu.open {
+  transform: translateY(0);
+}
+
+#mobile-menu-list {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+#mobile-menu-list a {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  font-family: "Aleo";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#mobile-menu-list .main.title {
+  margin-top: 32px;
+  margin-bottom: 56px;
+  text-align: center;
+}
+#mobile-menu-list .main.title h1 {
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+#mobile-menu-list .main-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 #header {
@@ -85,6 +141,10 @@ ul, ol {
   align-items: center;
   justify-content: center;
   height: 60px;
+}
+.search__container:hover {
+  border-radius: 3px;
+  border: 1px solid #5373FD;
 }
 .search__input {
   border: none;
@@ -174,6 +234,20 @@ ul, ol {
   letter-spacing: 0.1em;
   color: #fff;
   text-transform: uppercase;
+  position: relative;
+}
+.header-bottom a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 12px;
+  height: 1px;
+  width: 0;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+.header-bottom a:hover::after {
+  width: calc(100% - 25px);
 }
 .header-bottom .container {
   margin-top: 10px;
@@ -235,26 +309,25 @@ main .button-wrap button {
   flex-direction: column;
   gap: 27px;
 }
-.section1 .left {
+.section1 .container .left {
   margin-top: 190px;
 }
-.section1 .right {
+.section1 .container .right {
   margin-top: 124px;
   max-width: 424px;
   width: 100%;
 }
-.section1 .right .image-wrap:first-child {
+.section1 .container .right .image-wrap:first-child {
   margin-bottom: 16px;
 }
-
-.image-wrap {
+.section1 .image-wrap {
   max-width: 350px;
   width: 100%;
 }
-.image-wrap.first {
+.section1 .image-wrap.first {
   float: left;
 }
-.image-wrap.second {
+.section1 .image-wrap.second {
   float: right;
 }
 
@@ -262,22 +335,36 @@ main .button-wrap button {
   background-color: #333333;
 }
 .section2 .container {
-  padding-top: 23px;
-  padding-bottom: 60px;
+  padding-top: 24px;
+  padding-bottom: 61px;
 }
 .section2 ul li {
   max-width: 424px;
   width: 100%;
 }
-.section2 svg {
+.section2 .dash-arrows {
+  position: relative;
+}
+.section2 .dash-arrows svg {
   stroke: #fff;
-  width: 100%;
+  width: 872px;
+  height: 144px;
 }
 .section2 .dash-arrows {
+  position: relative;
+  top: 12px;
   height: 104px;
+  max-width: 872px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section2 .text {
   padding-top: 10px;
+}
+.section2 .icons-wrapper {
+  position: relative;
+  z-index: 10;
+  background: #333333;
 }
 .section2 .icons {
   display: flex;
@@ -303,6 +390,7 @@ main .button-wrap button {
 }
 
 .section3 .info, .section4 .info {
+  opacity: 0.9;
   position: relative;
   top: 220px;
   padding: 44px 32px;
@@ -365,7 +453,7 @@ main .button-wrap button {
 .section5 .container {
   padding-top: 120px;
 }
-.section5 .image-wrap {
+.section5 .left {
   max-width: 440px;
   width: 100%;
 }
@@ -463,4 +551,66 @@ footer .suptitle {
   line-height: 20px;
   letter-spacing: 0.2em;
   color: #fff;
+}
+
+.hamburger {
+  position: absolute;
+  right: 18px;
+  margin-top: -4px;
+  display: none;
+  border: none;
+  background: none;
+  position: relative;
+  width: 40px;
+  height: 24px;
+  z-index: 1001;
+}
+.hamburger::before, .hamburger::after, .hamburger span {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+.hamburger::before {
+  top: 2px;
+}
+.hamburger span {
+  top: 25px;
+}
+.hamburger::after {
+  bottom: 8px;
+}
+.hamburger.active span {
+  transform: scale(0);
+}
+.hamburger.active::before {
+  transform: rotate(-45deg);
+  top: 12px;
+}
+.hamburger.active::after {
+  transform: rotate(45deg);
+  bottom: 10px;
+}
+
+#shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  transition: all 0.7s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#shadow.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }

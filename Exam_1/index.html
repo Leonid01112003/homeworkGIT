@@ -7,8 +7,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/responce.min.css">
 </head>
 <body>
+
+  <div id="mobile-menu">
+    <div class="hamburger active" onclick="toggleMenu()"><span></span></div>
+    <nav id="mobile-menu-list">
+      <div class="main title">
+        <h1>Bhromaon</h1>
+      </div>
+      
+      <ul class="main-menu">
+          <li><a href="#">Who We Are</a></li>
+          <li><a href="#">What We Do</a></li>
+          <li><a href="#">Travel With Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+  </div>
+
+  <div id="shadow" onclick="toggleMenu()"></div>
+
+
     <header id="header">
       <div class="background">
         <div class="header-top">
@@ -22,7 +43,7 @@
                 </div>
               </div>
 
-              <div class="search__container">
+              <div class="search__container focus">
                 <form action="#" class="search__form">
                   <input type="text" placeholder="Search Your Travel Destination" class="search__input">
                   <button type="button" class="button">
@@ -44,21 +65,30 @@
       </div>
 
       
+      
         <div class="header-bottom">
-         
+          
           <div class="container">
+            
             <div class="logo title">
               <h1>Bhromaon</h1>
             </div>
+            
+              
+            
             <nav id="navigation">
-            <ul>
+              <ul>
                 <li><a href="#">Who We Are</a></li>
                 <li><a href="#">What We Do</a></li>
                 <li><a href="#">Travel With Us</a></li>
                 <li><a href="#">Contact Us</a></li>
               </ul>
+              
             </nav>
+            
+            <div id="hamb-btn" class="hamburger" onclick="toggleMenu()"><span></span></div>
           </div>
+          
         </div>
       </header>
       <main>
@@ -188,9 +218,9 @@
             </div>
             <div class="content">
               <div class="left">
-                <div class="image-wrap">
+                
                   <img src="assets/image/sec4-img.png" alt="">
-                </div>
+                
               </div>
               <div class="right">
                 <div class="info">
@@ -235,5 +265,13 @@
     
         <script src="assets/js/main.js"></script>
         <script src="https://kit.fontawesome.com/92bf9baff8.js" crossorigin="anonymous"></script>
+        <script>
+          function toggleMenu(){
+           document.getElementById("mobile-menu").classList.toggle("open")
+           document.getElementById("hamb-btn").classList.toggle("active")
+           document.getElementById("shadow").classList.toggle("show")
+          }
+         
+       </script>
 </body>
 </html>

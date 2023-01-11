@@ -10,8 +10,12 @@
 
     </symbol>
 
+<svg id="dash" viewBox="0 0 874 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.502" d="M1 91C1 91 217.014 -110.278 442.118 91C442.118 91 639.939 -111.5 873 91" stroke="white" stroke-linecap="round" stroke-dasharray="2 5"/>
+</svg>
 
-    <symbol viewBox="0 0 1000 330" id="dash">
+
+    <!-- <symbol viewBox="0 0 1000 330" id="dash">
     <g transform="translate(200,120)"> 
          <path  d="M360,100 C380,100 680,-210 1200,110 " 
          fill="none"  stroke-width="3" stroke-dasharray="8"/>
@@ -20,8 +24,8 @@
          <path class="dash2" d="M20,100 C0,100 380, -220 870,100" 
         fill="none"  stroke-width="3" stroke-dasharray="8"/>
         </g>
-    
-    
+   
+    </symbol> -->
        
     <symbol viewBox="0 0 64 64"  id="done">
             
