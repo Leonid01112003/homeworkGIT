@@ -11,12 +11,16 @@ html,body {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
     background-color: #fff;
     color: #070707;
     font-size: 18px;
     line-height: 25px;
     
+}
+a {
+    text-decoration-thickness: from-font;
+    color: #000;
 }
 
 .container {
@@ -26,75 +30,8 @@ body {
     
 }
 
-/*----header----*/
-.hamburger {
-    display: block;
-    border: none;
-    background: none;
-    position: relative;
-    width: 34px;
-    height: 20px;
-    
-    
-}
-    .hamburger::after:hover {
-        transform: rotate(45deg);
-        bottom: 7px;
-      }
-    .hamburger::before:hover {
-        transform: rotate(-45deg);
-        top: 10px;
-      }
-    .hamburger span:hover {
-        transform: scale(0);
-      }
-      .hamburger::before {
-        top: 2px;
-      }
-      .hamburger span {
-        top: 18px;
-      }
-      .hamburger::after {
-        bottom: 8px;
-      }
-  
-  .hamburger::before,
-  .hamburger::after, 
-  .hamburger span {
-    content: "";
-    display: inline-block;
-     width: 34px;
-     height: 2px;
-     position: absolute;
-     background-color: #000;
-     transition: all .2s ease;
-  }
-#mobile-menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #fff;
-    box-shadow: 0 0 4px 4px #999;
-    z-index: 1000;
-    width: 300px;
-    height: 100vh;
-    transform: translateX(-310px);
-    transition: all .4s ease;
-  }
-  #mobile-menu.open {
-    transform: translateX(0);
-  }
 
-  .mobile-menu-list ul li {
-    border-bottom: 1px solid #e0e0e0;
-  }
-  .mobile-menu-list ul li a {
-    display: inline-block;
-    padding: 15px;
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-  }
+
 header {
     
     line-height: 80px;
@@ -104,15 +41,16 @@ header {
     border-bottom: 1px solid #828282;
 }
 .main_menu {
-    padding: 28px 0 20px;
+    
     text-align: center;
 }
 
 .main_menu ul {
     list-style: none;
     text-align: center;
+    
 }
-.main_menu ul li {
+ #header .main_menu ul li {
     display: inline-block;
     margin: 0 19px;
     
@@ -127,7 +65,7 @@ header {
     color: #070707;
 }
 
-/*----header----*/
+
 
 
 h2 {
@@ -142,10 +80,17 @@ text-align: center;
    }
  
 .content p {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 }
 .content {
+    
     padding-bottom: 72px;
+}
+.content p:nth-child(2) {
+    margin-right: 2px;
+}
+.content p:nth-child(3) {
+    margin-left: 2px;
 }
 .section2 {
     text-align: center;
@@ -188,9 +133,15 @@ h1 {
     padding-top: 100px ;
     padding-bottom: 10px;
 }
+
+#skills ul {
+    display: flex;
+    gap: 97px;
+}
 #skills ul li {
+    max-width: 170px;
+    width: 100%;
     list-style-type: none;
-    display: inline-block;
     text-align: center;
     
 }
@@ -203,18 +154,16 @@ opacity: 0.5;
 height: 38px;
 }
 
-#skills ul li:last-child {
-    margin-right: 0px;
+.stars-wrapper.figma {
+    margin-top: 30px;
 }
-.skills-item {
-    width: 170px;
-    margin-right: 91px;
-    
-}
+
+
+
 
 .skills_image {
     margin: 0 auto;
-    width: 81px;
+    width: 80px;
     margin-bottom: 25px;
 }
 .skills_image.figma {
@@ -256,29 +205,61 @@ height: 38px;
 footer .container {
     padding-top: 100px;
 }
-footer p {
+footer .suptitle p {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif ;
+    font-family: 'Open Sans' ;
     font-size: 18px;
     line-height: 22px;
+}
+
+footer .title {
+    margin-bottom: 15px;
+}
+.suptitle {
+    margin-bottom: 60px;
 }
 .button-wrapper {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 button {
-    font-family:Arial, Helvetica, sans-serif ;
+    border: 1px solid #fff;
+    font-family: 'Open Sans' ;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
     border-radius: 20px;
-    padding: 7px 27px;
+    padding: 10px 16px;
     background-color: #000;
     color: #fff;
+    font-weight: 700;
 }
+
+
 button:hover {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
+}
+
+footer .main_menu ul li {
+    margin:  0 22px;
+    display: inline-block;
+}
+
+.like-me-on {
+    font-family: 'Open Sans';
+    color: #828282;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 200px;
+    line-height: 19px;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 img {
     width: 100%;
@@ -286,3 +267,4 @@ img {
     object-fit: cover;
     vertical-align: top;
 }
+

@@ -124,7 +124,7 @@ button:hover {
 
 .background {
   height: 56vw;
-  background: url(../image/HeaderBackground.png) center center/cover no-repeat;
+  background: #0472AD url(../image/HeaderBackground.png) center center/cover no-repeat;
 }
 
 .search__form {
@@ -275,7 +275,7 @@ main .button-wrap button {
 
 .section1 {
   height: 45.6vw;
-  background: url(../image/WhyBackground2sec.png) center center/cover no-repeat;
+  background: #3E3C3C url(../image/WhyBackground2sec.png) center center/cover no-repeat;
 }
 .section1 h2 {
   font-family: "Aleo";
@@ -385,7 +385,7 @@ main .button-wrap button {
 }
 
 .section3 {
-  background: url(../image/sec2-back.png) center center/cover no-repeat;
+  background: #A19EB9 url(../image/sec2-back.png) center center/cover no-repeat;
   height: 44.5vw;
 }
 
@@ -437,7 +437,7 @@ main .button-wrap button {
 }
 
 .section4 {
-  background: url(../image/sec3-back.png) center center/cover no-repeat;
+  background: #FDA78C url(../image/sec3-back.png) center center/cover no-repeat;
   height: 44.5vw;
 }
 .section4 .info {
@@ -447,7 +447,7 @@ main .button-wrap button {
 }
 
 .section5 {
-  background: url(../image/sec4-back.png) center center/cover no-repeat;
+  background: #27292A url(../image/sec4-back.png) center center/cover no-repeat;
   height: 44.3vw;
 }
 .section5 .container {

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
+</head>
+<body>
+  <div id="app">
+
+  </div>
+  <ul id="skills">
+    <li class="skill-item">HTML</li>
+    <li class="skill-item">CSS</li>
+    <li class="skill-item">JavaScript</li>
+    <li class="skill-item">Base Seo</li>
+  </ul>
+
+  <ul id="products">
+    <li class="prod-item">bread</li>
+    <li class="prod-item">milk</li>
+    <li class="prod-item">butter</li>
+    <li class="prod-item">salt</li>
+  </ul>
+
+  <script>
+    const app = document.getElementById('app');
+
+    const h1 = document.createElement('h1');
+    h1.innerText = 'hello world';
+    h1.classList.add('title');
+    h1.setAttribute('rel', 'something');
+    h1.dataset.hello = 'world';
+    console.log(h1);
+    
+
+    app.append(h1);
+
+    const liAll = document.getElementsByTagName('li');
+    console.log(liAll);
+    const liSkills = document.getElementsByClassName('skill-item');
+    console.log(liSkills);
+
+    for(let i=0;i<liSkills.length;i++){
+      console.log(liSkills[i].innerText);
+      liSkills[i].style = 'color:red';
+    }
+    Array.from(liSkills).forEach(el => {
+      el.style = 'font-size:22px';
+    })
+
+    const liSkills2 = document.querySelectorAll('.skill-item');
+    console.log(liSkills2);
+
+    const liSkill = document.createElement('li');
+    liSkill.innerText = 'RWD';
+    liSkill.classList.add('skill-item')
+    document.getElementById('skills').append(liSkill);
+    console.log('AFTER ADD NEW ELEM');
+    console.log(liSkills);
+    console.log(liSkills2);
+
+    const elemOne = document.querySelector('#products');
+   const btnList = document.getElementsByClassName('share-btn')
+  </script>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

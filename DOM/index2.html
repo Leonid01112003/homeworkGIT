@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="sayHello()"></button> -->
+    <!-- <button id="hello-btn">Hello</button> -->
+    <!-- <input type="text" id="task-text">
+    <button type="button" id="add-btn">Add</button>
+    <br>
+    <ol id="tasks"> 
+        <li>
+            Lorem ipsum dolor sit amet.
+            <button type="button">Done </button>
+            <button type="button">Remove </button>
+        </li> 
+    </ol> -->
+
+    <div id="app">
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <ul id="skills">
+        <li class="skill-item first-skill html-skill">HTML</li>
+        <li class="skill-item">CSS</li>
+        <li class="skill-item">JavaScript</li>
+        <li class="skill-item">Base seo</li>
+    </ul>
+
+    <ul id="products">
+        <li class="prod-item">Bread</li>
+        <li class="prod-item" data-foo="bar">Milk</li>
+        <li class="prod-item">Beer</li>
+        <li class="prod-item">Meat</li>
+    </ul>
+
+    <div class="news_list">
+
+    </div>
+    <script>
+
+        // document.getElementById('add-btn').onclick = function(){
+        //     const ol = document.getElementById('tasks');
+        //     const li = document.createElement('li');
+        //     li.innerText = 'done';
+
+        //     const doneBtn = document.createElement('button');
+        //     done.btn.innerText = 'done';
+            
+        //     li.append(doneBtn)
+
+        //     const removeBtn = document.createElement('button');
+        //     removeBtn.setAttribute('type', 'button');
+        //     removeBtn.innerText = 'remove';
+        //     removeBtn.className = 'remove-btn';
+
+        //     document.getElementById('add-btn').onclick = function(){
+        //         const ol = document.getElementById('tasks')
+        //     }
+        // }
+        // const btn = document.createElement('button');
+        // btn.id = 'hello-btn';
+        // btn.innerText = 'hello'
+        // //mouse events
+        // //onclick, doubleclick, mouseup, mousedown, 
+        // document.getElementById('hello-btn').onclick = function(event){
+        //     console.log(event);
+        // }
+        // document.getElementById('hello-btn').addEventListener('click', function(event){
+        //     console.log('event 2');
+        // })
+
+        // document.getElementById('hello-btn').onclick = null;
+        // document.getElementById('hello-btn').removeEventListener('click')
+
+        // // document.getElementById('hello-btn').click();
+
+        // document.body.prepend(btn);
+
+        const skillsList = [
+      {
+        name: 'HTML'
+      },
+      {
+        name: 'CSS'
+      },
+      {
+        name: 'JavaScript'
+      },
+      {
+        name: 'Base SEO'
+      },
+    ];
+
+    const ol = document.createElement('ol');
+
+    skillsList.forEach(s => {
+        const li = document.createElement('li');
+        li.innerText = s.name;
+        const b = document.createElement('b');
+        b.innerText = 'Name';
+        li.prepend(b);
+        ol.append(li);
+    });
+    app.append(ol);
+
+    </script>
+</body>
+</html>

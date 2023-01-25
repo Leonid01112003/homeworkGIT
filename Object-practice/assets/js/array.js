@@ -54,3 +54,15 @@ const arrInput = [3,6,23,6,99,65,34,6,55,82];
 const arrOutput = arrInput.map( (el)=>  el % 2 === 0 ? el * 2 : el
 )
 console.log(arrOutput);
+
+arrInput.sort((a, b)=>{
+    return a - b;
+    // if(a<b){
+    //     return -1
+    // }else  if(a>b){
+    //     return 1
+    // }else if(a===b){
+    //     return 0
+    // }
+});
+console.log(arrInput);

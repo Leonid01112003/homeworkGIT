@@ -1,10 +1,10 @@
-@media screen and (max-width: 1077px) {
+ @media screen and (max-width: 1077px) {
     .skills_ul {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        /* flex-direction: column; */
-    }
+        
+     }
     .skills-item {
         margin-right: 0;
     }
@@ -12,4 +12,11 @@
         padding: 40px;
     }
    
+} 
+
+@media screen and (max-width: 580px) {
+    .skills_ul {
+        justify-content: center;
+    }
 }
+
