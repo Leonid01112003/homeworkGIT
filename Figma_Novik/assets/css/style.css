@@ -191,6 +191,10 @@ height: 38px;
     margin-top: 95px;
     padding-top: 100px;
 }
+
+.section-portfolio a:hover {
+    color: #828282;
+}
 .section-portfolio h2 {
     margin-bottom: 40px;
 }
