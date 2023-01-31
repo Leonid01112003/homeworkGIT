@@ -240,3 +240,4 @@ const discountBtn = document.getElementById('discountButton');
 discountBtn.addEventListener('click', function(){
     calcDiscount();
 });
+
