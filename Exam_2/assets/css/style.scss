@@ -1,0 +1,155 @@
+$base-size: 16;
+$white: #fff;
+
+@mixin fz($size_px) {
+  font-size: ($size_px / $base-size) * 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+
+
+}
+
+body {
+  @include fz(16);
+}
+
+a, button {
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:  url(../images/header-bac.png) center center / cover 
+  no-repeat, linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 43.27%);
+  
+  }
+  
+  
+  .logo-wrapper {
+    max-width: 241px;
+    height: 52px;
+    width: 100%;
+  }
+  .input-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+  .header-top {
+    width: 100%;
+    position: fixed;
+    padding-top: 53px;
+    height: 54px;
+    .container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  #navigation {
+    margin-left: 34px;
+    max-width: 515px;
+    width: 100%;
+    ul {
+      font-family: 'Source Sans Pro';
+      text-transform: uppercase;
+      @include fz(14);
+      line-height: 17.6px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .icons-wrapper {
+    ul {
+      display: flex;
+      
+      justify-content: space-between;
+    }
+  }
+  
+}
+.header-bottom {
+  width: 100%;
+  .title {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    @include fz(43);
+    line-height: 97.52px;
+    letter-spacing: 0.1em;
+    color: $white;
+  }
+  .suptitle {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    @include fz(18);
+    line-height: 22px;
+    letter-spacing: 0.3em;
+    color: $white;
+  }
+  .right {
+    position: absolute;
+    right: 11px;
+    margin-top: -25px;
+    ul {
+      display: flex; 
+      flex-direction: column;
+      gap: 36px;
+    }
+  }
+}
+
+
+.icons-wrapper {
+  max-width: 160px;
+  width: 100%;
+  .fa-facebook-f {
+    border: 1px solid;
+    padding: 11px 15px;
+    border-radius: 50%;
+  }
+  .fa-twitter {
+    border: 1px solid;
+    padding: 11px 12px;
+    border-radius: 50%;
+  }
+  .fa-instagram {
+    border: 1px solid;
+    padding: 11px 12px;
+    border-radius: 50%;
+  }
+}
+
+

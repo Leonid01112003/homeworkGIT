@@ -1,0 +1,6 @@
+{
+    "name": "Bob",
+     "age": 27,
+     "discount": 1.8,
+     "isAdmin": false
+}

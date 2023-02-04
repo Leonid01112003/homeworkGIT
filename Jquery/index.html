@@ -6,11 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
 </head>
 <body>
-  <h1>Hello world</h1>
+  <h1 id="h1" data-title="Title text" data-cnt="10">Hello world</h1>
+
+  <ul class="list">
+    <li class="item">
+      <h3>Lorem ipsum dolor sit.</h3>
+      <div style="display:none">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Tempore cum, debitis non minima vitae quibusdam commodi. 
+          Mollitia quo delectus nulla.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Tempore cum, debitis non minima vitae quibusdam commodi. 
+            Mollitia quo delectus nulla.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Tempore cum, debitis non minima vitae quibusdam commodi. 
+              Mollitia quo delectus nulla.</p>
+      </div>
+    </li>
+    <li class="item">Lorem ipsum dolor sit.</li>
+    <li class="item">Lorem ipsum dolor sit.</li>
+    <li class="item">
+      <ul class="list">
+        <li class="item">Lorem ipsum dolor sit.</li>
+        <li class="item">Lorem ipsum dolor sit.</li>
+        <li class="item">Lorem ipsum dolor sit.</li>
+        <li class="item">
+          KU!
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+
     <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/jquery.toast.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
