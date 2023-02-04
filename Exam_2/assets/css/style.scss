@@ -99,6 +99,24 @@ header {
   }
   
 }
+
+.arrow-wrapper {
+  position: absolute;
+  bottom: 33px;
+  a {
+    height: 5px;
+    display: block;
+    border: 1px solid #fff;
+    padding: 19px 15px;
+    border-radius: 50%;
+  }
+  img {
+    height: 6px;
+    max-width: 17px;
+    width: 100%;
+  
+  }
+}
 .header-bottom {
   width: 100%;
   .title {
@@ -129,23 +147,7 @@ header {
       gap: 36px;
     }
   }
-  .arrow-wrapper {
-    position: absolute;
-    bottom: 33px;
-    a {
-      height: 5px;
-      display: block;
-      border: 1px solid #fff;
-      padding: 19px 15px;
-      border-radius: 50%;
-    }
-    img {
-      height: 6px;
-      max-width: 17px;
-      width: 100%;
-    
-    }
-  }
+  
 }
 
 

@@ -81,6 +81,23 @@ header .icons-wrapper ul {
   justify-content: space-between;
 }
 
+.arrow-wrapper {
+  position: absolute;
+  bottom: 33px;
+}
+.arrow-wrapper a {
+  height: 5px;
+  display: block;
+  border: 1px solid #fff;
+  padding: 19px 15px;
+  border-radius: 50%;
+}
+.arrow-wrapper img {
+  height: 6px;
+  max-width: 17px;
+  width: 100%;
+}
+
 .header-bottom {
   width: 100%;
 }
@@ -111,22 +128,6 @@ header .icons-wrapper ul {
   display: flex;
   flex-direction: column;
   gap: 36px;
-}
-.header-bottom .arrow-wrapper {
-  position: absolute;
-  bottom: 33px;
-}
-.header-bottom .arrow-wrapper a {
-  height: 5px;
-  display: block;
-  border: 1px solid #fff;
-  padding: 19px 15px;
-  border-radius: 50%;
-}
-.header-bottom .arrow-wrapper img {
-  height: 6px;
-  max-width: 17px;
-  width: 100%;
 }
 
 .icons-wrapper {
