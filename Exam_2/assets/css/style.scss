@@ -1,5 +1,6 @@
 $base-size: 16;
 $white: #fff;
+$dark-blue: #2C4058;
 
 @mixin fz($size_px) {
   font-size: ($size_px / $base-size) * 1rem;
@@ -43,8 +44,13 @@ ul, ol {
   max-width: 1170px;
   margin: 0 auto;
 }
-
+input[type="radio" ]{
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+}
 header {
+  
   .background {
     display: flex;
     justify-content: center;
@@ -127,6 +133,7 @@ header {
     line-height: 97.52px;
     letter-spacing: 0.1em;
     color: $white;
+    margin-bottom: 20px;
   }
   .suptitle {
     text-align: center;
@@ -173,3 +180,83 @@ header {
 }
 
 
+main {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.top {
+  .content {
+    margin-top: 90px;
+  }
+  .left {
+    &::before {
+      
+      left: 0;
+      
+    }
+  }
+  
+}
+.top, .bottom {
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  position: relative;
+  .container {
+    padding-top: 30px;
+  }
+  .left {
+    &::before {
+      content: '';
+      max-width: 585px;
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      background-color: black;
+      
+    }
+  }
+  .right {
+    max-width: 470px;
+  }
+  .title {
+    
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 53.64px;
+    text-align: center;
+    color: $dark-blue;
+    &::before {
+      content: '';
+      top: 0;
+      margin-left: -50px;
+      color: $dark-blue;
+      width: 100px;
+      height: 1.5px;
+      background-color: #000;
+      position: absolute;
+      
+
+    }
+  }
+ 
+  .image-wrapper {
+    max-width: 630px;
+    transform: translate(10px, 10px);
+  }
+}
+.bottom {
+  .content {
+    flex-direction: row-reverse;
+  }
+  .left {
+    &::before {
+      
+      right: 0;
+    }
+  }
+}

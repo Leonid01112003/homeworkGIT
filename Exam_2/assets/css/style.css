@@ -35,6 +35,12 @@ ul, ol {
   margin: 0 auto;
 }
 
+input[type=radio] {
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+}
+
 header .background {
   display: flex;
   justify-content: center;
@@ -109,6 +115,7 @@ header .icons-wrapper ul {
   line-height: 97.52px;
   letter-spacing: 0.1em;
   color: #fff;
+  margin-bottom: 20px;
 }
 .header-bottom .suptitle {
   text-align: center;
@@ -148,4 +155,69 @@ header .icons-wrapper ul {
   border: 1px solid;
   padding: 11px 12px;
   border-radius: 50%;
+}
+
+main {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.top .content {
+  margin-top: 90px;
+}
+.top .left::before {
+  left: 0;
+}
+
+.top, .bottom {
+  position: relative;
+}
+.top .content, .bottom .content {
+  display: flex;
+  justify-content: space-between;
+}
+.top .container, .bottom .container {
+  padding-top: 30px;
+}
+.top .left::before, .bottom .left::before {
+  content: "";
+  max-width: 585px;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: black;
+}
+.top .right, .bottom .right {
+  max-width: 470px;
+}
+.top .title, .bottom .title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 53.64px;
+  text-align: center;
+  color: #2C4058;
+}
+.top .title::before, .bottom .title::before {
+  content: "";
+  top: 0;
+  margin-left: -50px;
+  color: #2C4058;
+  width: 100px;
+  height: 1.5px;
+  background-color: #000;
+  position: absolute;
+}
+.top .image-wrapper, .bottom .image-wrapper {
+  max-width: 630px;
+  transform: translate(10px, 10px);
+}
+
+.bottom .content {
+  flex-direction: row-reverse;
+}
+.bottom .left::before {
+  right: 0;
 }
